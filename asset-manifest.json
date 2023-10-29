@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/Nicks-Portfolio/static/css/main.86e4f4a4.css",
+    "main.js": "/Nicks-Portfolio/static/js/main.8ca17609.js",
+    "static/media/about-image.png": "/Nicks-Portfolio/static/media/about-image.1daaacf6ab63c03c68a2.png",
+    "static/media/hero-image.png": "/Nicks-Portfolio/static/media/hero-image.fc79635370af8dd41233.png",
+    "static/media/famfiction-showcase.png": "/Nicks-Portfolio/static/media/famfiction-showcase.5556035b8388d007a163.png",
+    "static/media/coming-soon.png": "/Nicks-Portfolio/static/media/coming-soon.f23b02e26627d569d5e1.png",
+    "static/media/sunshot-showcase.png": "/Nicks-Portfolio/static/media/sunshot-showcase.3f5671b5a67680e3128b.png",
+    "static/media/cat.png": "/Nicks-Portfolio/static/media/cat.903a3b5a9513bc4cac31.png",
+    "index.html": "/Nicks-Portfolio/index.html",
+    "main.86e4f4a4.css.map": "/Nicks-Portfolio/static/css/main.86e4f4a4.css.map",
+    "main.8ca17609.js.map": "/Nicks-Portfolio/static/js/main.8ca17609.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.86e4f4a4.css",
+    "static/js/main.8ca17609.js"
+  ]
+}
