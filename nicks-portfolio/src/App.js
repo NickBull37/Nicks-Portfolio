@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HomePage } from "./components";
 
@@ -8,40 +7,9 @@ function App() {
     <BrowserRouter>
         <Routes>
             <Route path="/" exact element={<HomePage />} />
-            {/* <Route path="/login" exact element={<Login setUserAuthenticated={setUserAuthenticated} />} />
-            <Route path="/create-account" element={<CreateAccount setUserAuthenticated={setUserAuthenticated} />} /> */}
         </Routes>
     </BrowserRouter>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       Edit <code>src/App.js</code> and save to reload.
-    //     </p>
-    //     <a
-    //       className="App-link"
-    //       href="https://reactjs.org"
-    //       target="_blank"
-    //       rel="noopener noreferrer"
-    //     >
-    //       Learn React
-    //     </a>
-    //   </header>
-    // </div>
   );
 }
 

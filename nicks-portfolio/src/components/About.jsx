@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { aboutImage } from '../utils/constants';
 import { Box, List, ListItem, ListItemText, Typography } from '@mui/material';
-import { aboutImage } from '../utils/constants'
+import OpenInNewRoundedIcon from '@mui/icons-material/OpenInNewRounded';
 
 const About = () => {
 
@@ -16,7 +17,7 @@ const About = () => {
         <Box
             id="about"
             sx={{
-                pt: '80px',
+                pt: { xs: '0', md: '40px' },
                 pb: '40px',
                 px: '0',
                 color: '#ababab'
@@ -25,7 +26,7 @@ const About = () => {
             <Box className="container">
                 <Box className="row">
                     <Box className="about-col-1">
-                        <img src={aboutImage} alt="" />
+                        <img src={aboutImage} alt="Nick" />
                     </Box>
                     <Box className="about-col-2">
                         <Typography
@@ -37,18 +38,22 @@ const About = () => {
                         >
                             About Me
                         </Typography>
-                        <Typography>
-                            I am a proven .NET Developer with 4-year Computer Science degree and 4+ years experience. As a dedicated problem solver, I have focused
-                            on developing simple & efficient code to solve complex problems. Through my time at Clarity & Anovaa, I have gained hands-on
-                            development experience using C# and .NET and remain motivated to expanding my skill set.
+                        <Typography
+                            sx={{
+                                fontSize: { xs: '1rem', md: '1.125rem' }
+                            }}
+                        >
+                            I am a full-stack software developer with 5+ years experience working primarily on .NET applications. As a dedicated problem solver, I have focused
+                            on developing simple, efficient, & scalable solutions that solve complex problems. Outside of work, I enjoy playing Destiny 2 or a good game of chess, hanging 
+                            out with my friends, and cheering on the Philadelphia sports teams.
                         </Typography>
                         <Box
                             display={'flex'}
                             justifyContent={{ xs: 'space-between', md: 'inherit' }}
                             gap={{ xs: 0, md: 8 }}
                             sx={{
-                                mt: {xs: '40px', md: '20px'},
-                                mb: '15px'
+                                mt: '40px',
+                                mb: '10px'
                             }}
                         >
                             <Typography
@@ -56,7 +61,7 @@ const About = () => {
                                 onClick={() => opentab('skills')}
                                 sx={{
                                     fontSize: '1.375rem',
-                                    fontWeight: '500',
+                                    fontWeight: '600',
                                 }}
                             >
                                 Skills
@@ -66,7 +71,7 @@ const About = () => {
                                 onClick={() => opentab('experience')}
                                 sx={{
                                     fontSize: '1.375rem',
-                                    fontWeight: '500',
+                                    fontWeight: '600',
                                 }}
                             >
                                 Experience
@@ -76,7 +81,7 @@ const About = () => {
                                 onClick={() => opentab('technologies')}
                                 sx={{
                                     fontSize: '1.375rem',
-                                    fontWeight: '500',
+                                    fontWeight: '600',
                                 }}
                             >
                                 Tools
@@ -118,26 +123,59 @@ const About = () => {
                             className={`tab-contents ${activeTabContent === 'experience' ? 'active-tab' : ''}`}
                         >
                             <List>
-                                <ListItem  sx={{ px: 0 }}>
+                                <ListItem sx={{ px: 0 }}>
                                     <ListItemText
                                         primary="2023 - Current"
-                                        secondary="Software developer at TheWebstarauntStore.com"
+                                        secondary={
+                                            <span>
+                                                Software developer at WebstaurantStore.com{' '}
+                                                <a
+                                                    href="https://www.webstaurantstore.com/"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                >
+                                                    <OpenInNewRoundedIcon fontSize='small' sx={{ color: "#ff00ff", ml: 1 }} />
+                                                </a>
+                                            </span>
+                                        }
                                         secondaryTypographyProps={{ fontSize: '1.125rem', color: '#ababab', pt: '2px' }}
                                         sx={{ color: '#990099' }}
                                     />
                                 </ListItem>
-                                <ListItem  sx={{ px: 0 }}>
+                                <ListItem sx={{ px: 0 }}>
                                     <ListItemText
                                         primary="2023 - 2023"
-                                        secondary="Software developer at Clarity Ventures Inc."
+                                        secondary={
+                                            <span>
+                                                Software developer at Clarity Ventures, Inc.{' '}
+                                                <a
+                                                    href="https://www.clarity-ventures.com/"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                >
+                                                    <OpenInNewRoundedIcon fontSize='small' sx={{ color: "#ff00ff", ml: 1 }} />
+                                                </a>
+                                            </span>
+                                        }
                                         secondaryTypographyProps={{ fontSize: '1.125rem', color: '#ababab', pt: '2px' }}
                                         sx={{ color: '#990099' }}
                                     />
                                 </ListItem>
-                                <ListItem  sx={{ px: 0 }}>
+                                <ListItem sx={{ px: 0 }}>
                                     <ListItemText
                                         primary="2019 - 2022"
-                                        secondary="Software developer at Entech LLC."
+                                        secondary={
+                                            <span>
+                                                Software developer at Anovaa{' '}
+                                                <a
+                                                    href="https://www.anovaa.com/"
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                >
+                                                    <OpenInNewRoundedIcon fontSize='small' sx={{ color: "#ff00ff", ml: 1 }} />
+                                                </a>
+                                            </span>
+                                        }
                                         secondaryTypographyProps={{ fontSize: '1.125rem', color: '#ababab', pt: '2px' }}
                                         sx={{ color: '#990099' }}
                                     />
@@ -152,7 +190,7 @@ const About = () => {
                                 <ListItem  sx={{ px: 0 }}>
                                     <ListItemText
                                         primary=".NET / ASP.NET"
-                                        secondary="Developing scalable web applications"
+                                        secondary="Developing clean & scalable web applications"
                                         secondaryTypographyProps={{ fontSize: '1.125rem', color: '#ababab', pt: '2px' }}
                                         sx={{ color: '#990099' }}
                                     />
@@ -167,7 +205,7 @@ const About = () => {
                                 </ListItem>
                                 <ListItem  sx={{ px: 0 }}>
                                     <ListItemText
-                                        primary="React JS"
+                                        primary="React JS / Material UI"
                                         secondary="Developing mobile responsive front-end solutions"
                                         secondaryTypographyProps={{ fontSize: '1.125rem', color: '#ababab', pt: '2px' }}
                                         sx={{ color: '#990099' }}

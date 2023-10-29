@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Box, Typography } from '@mui/material';
+import { Box, Stack, Typography } from '@mui/material';
 
 const Header = () => {
 
@@ -46,28 +46,50 @@ const Header = () => {
                     <i className="fa-solid fa-bars" onClick={() => toggleMenu()}></i>
                 </nav>
                 <Box
-                    sx={{
-                        mt: { xs: '197%', md: '20%' },
-                    }}
+                    display="flex"
+                    flexDirection={{ xs: 'column-reverse', md: 'row' }}
+                    justifyContent="space-between"
+                    alignItems="center"
                 >
-                    <Typography
-                        variant='h5'
+                    <Stack>
+                        <Typography
+                            variant='h4'
+                            sx={{
+                                fontSize: { xs: '2.5rem', md: '3.75rem' },
+                                fontWeight: '700',
+                                
+                            }}
+                        >
+                            Hi, my name is<br /><span className="color-purple">Nick Bulisky</span>
+                        </Typography>
+                        <Typography
+                            display={{ xs: 'none', md: 'block' }}
+                            variant='h5'
+                            sx={{
+                                fontSize: { xs: '1.25rem', md: '1.5rem' },
+                                marginTop: '30px'
+                            }}
+                        >
+                            I am a full-stack software developer<br />from Pennsylvania.
+                        </Typography>
+                        <Typography
+                            display={{ md: 'none' }}
+                            variant='h5'
+                            sx={{
+                                fontSize: { xs: '1.25rem', md: '1.5rem' },
+                                marginTop: '30px'
+                            }}
+                            >
+                            I am a full-stack software developer from Pennsylvania.
+                        </Typography>
+                    </Stack>
+                    <Box
+                        id="hero-img"
                         sx={{
-                            fontSize: { xs: '1.5rem', md: '1.875rem' },
+                            mb: { xs: '30px', md: '0' }
                         }}
                     >
-                        Software Engineer
-                    </Typography>
-                    <Typography
-                        variant='h4'
-                        sx={{
-                            fontSize: { xs: '2.5rem', md: '3.75rem' },
-                            fontWeight: '700',
-                            marginTop: '10px'
-                        }}
-                    >
-                        Hi, my name is<br /><span className="color-purple">Nick Bulisky</span>
-                    </Typography>
+                    </Box>
                 </Box>
             </Box>
         </Box>

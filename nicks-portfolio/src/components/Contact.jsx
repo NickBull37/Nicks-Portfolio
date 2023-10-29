@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { styled } from '@mui/material/styles';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { Box, Button, Snackbar, LinearProgress, Typography, Fade } from '@mui/material';
+import { Box, Button, Snackbar, LinearProgress, Typography, Fade, CardMedia } from '@mui/material';
 import MuiAlert from '@mui/material/Alert';
 import DownloadIcon from '@mui/icons-material/Download';
-import { paperPlaneIcon, phoneIcon, githubIcon, linkedInIcon } from '../utils/constants';
+import { paperPlaneIcon, phoneIcon, githubIcon, linkedInIcon, cat } from '../utils/constants';
 
 const theme = createTheme({
     palette: {
@@ -99,8 +99,8 @@ const Contact = () => {
                             {phoneIcon}215-260-4875
                         </Typography>
                         <Box className="social-icons">
-                            <a href="https://github.com/NickBull37">{githubIcon}</a>
-                            <a href="https://www.linkedin.com/in/nicholas-bulisky-959975161/">{linkedInIcon}</a>
+                            <a href="https://github.com/NickBull37" target="_blank" rel="noreferrer">{githubIcon}</a>
+                            <a href="https://www.linkedin.com/in/nicholas-bulisky-959975161/" target="_blank" rel="noreferrer">{linkedInIcon}</a>
                         </Box>
                         <Box
                             display={{ xs: 'flex', md: 'block' }}
@@ -164,6 +164,22 @@ const Contact = () => {
                         </form>
                     </Box>
                 </Box>
+            </Box>
+            <Box
+                display="flex"
+                justifyContent="flex-end"
+                px="5%"
+            >
+                <CardMedia
+                    component='img'
+                    height='70px'
+                    image={cat}
+                    sx={{
+                        
+                        minWidth: '80px',
+                        maxWidth: '80px'
+                    }}
+                />
             </Box>
             <Box
                 className="copyright"

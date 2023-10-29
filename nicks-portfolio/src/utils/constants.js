@@ -1,8 +1,9 @@
 // Images
-export const aboutImage = require('../images/user.png');
-export const work1 = require('../images/work-1.png');
-export const work2 = require('../images/work-2.png');
-export const work3 = require('../images/work-3.png');
+export const aboutImage = require('../images/about-image.png');
+export const sunshot = require('../images/sunshot-showcase.png');
+export const famfiction = require('../images/famfiction-showcase.png');
+export const comingsoon = require('../images/coming-soon.png');
+export const cat = require('../images/cat.png');
 
 
 // Icons

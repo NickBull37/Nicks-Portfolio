@@ -28,7 +28,7 @@ const Services = () => {
                         >
                             Full-Stack Development
                         </Typography>
-                        <Typography>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</Typography>
+                        <Typography>My goal is to expand my skill set to be as flexible as possible so I can contribute wherever I'm needed and participate in all areas of the SDLC.</Typography>
                     </Box>
                     <Box>
                         {laptopCodeIcon}
@@ -42,7 +42,7 @@ const Services = () => {
                         >
                             External Integrations
                         </Typography>
-                        <Typography>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</Typography>
+                        <Typography>I have built 3rd party integrations with public APIs for AI generation (ChatGPT & Replicate), payment processing (Paya & Authorize.net) and others.</Typography>
                     </Box>
                     <Box>
                         {cropIcon}
@@ -56,7 +56,7 @@ const Services = () => {
                         >
                             UI/UX Design
                         </Typography>
-                        <Typography>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</Typography>
+                        <Typography>I pride myself on designing interfaces that are elegant in appearence and intuitive for users at any level in both desktop and mobile formats. </Typography>
                     </Box>
                 </Box>
             </Box>
