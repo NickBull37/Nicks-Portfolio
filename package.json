@@ -41,5 +41,8 @@
   "devDependencies": {
     "depcheck": "^1.4.7",
     "gh-pages": "^6.0.0"
-  }
+  },
+  "description": "This is a portfolio website for Nick Bulisky.",
+  "main": "index.js",
+  "author": "Nick Bulisky"
 }
