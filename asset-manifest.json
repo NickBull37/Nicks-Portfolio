@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/nicks-portfolio/static/css/main.bfa56f2f.css",
-    "main.js": "/nicks-portfolio/static/js/main.ead7fa23.js",
-    "static/media/about-image.png": "/nicks-portfolio/static/media/about-image.1daaacf6ab63c03c68a2.png",
-    "static/media/hero-image.png": "/nicks-portfolio/static/media/hero-image.fc79635370af8dd41233.png",
-    "static/media/famfiction-showcase.png": "/nicks-portfolio/static/media/famfiction-showcase.5556035b8388d007a163.png",
-    "static/media/coming-soon.png": "/nicks-portfolio/static/media/coming-soon.f23b02e26627d569d5e1.png",
-    "static/media/sunshot-showcase.png": "/nicks-portfolio/static/media/sunshot-showcase.3f5671b5a67680e3128b.png",
-    "static/media/cat.png": "/nicks-portfolio/static/media/cat.903a3b5a9513bc4cac31.png",
-    "index.html": "/nicks-portfolio/index.html",
-    "main.bfa56f2f.css.map": "/nicks-portfolio/static/css/main.bfa56f2f.css.map",
-    "main.ead7fa23.js.map": "/nicks-portfolio/static/js/main.ead7fa23.js.map"
+    "main.css": "/static/css/main.402beb89.css",
+    "main.js": "/static/js/main.9541b5ce.js",
+    "static/media/about-image.png": "/static/media/about-image.1daaacf6ab63c03c68a2.png",
+    "static/media/hero-image.png": "/static/media/hero-image.fc79635370af8dd41233.png",
+    "static/media/famfiction-showcase.png": "/static/media/famfiction-showcase.5556035b8388d007a163.png",
+    "static/media/coming-soon.png": "/static/media/coming-soon.f23b02e26627d569d5e1.png",
+    "static/media/sunshot-showcase.png": "/static/media/sunshot-showcase.3f5671b5a67680e3128b.png",
+    "static/media/cat.png": "/static/media/cat.903a3b5a9513bc4cac31.png",
+    "index.html": "/index.html",
+    "main.402beb89.css.map": "/static/css/main.402beb89.css.map",
+    "main.9541b5ce.js.map": "/static/js/main.9541b5ce.js.map"
   },
   "entrypoints": [
-    "static/css/main.bfa56f2f.css",
-    "static/js/main.ead7fa23.js"
+    "static/css/main.402beb89.css",
+    "static/js/main.9541b5ce.js"
   ]
 }
