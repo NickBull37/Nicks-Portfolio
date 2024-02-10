@@ -2,6 +2,7 @@
 export const aboutImage = require('../images/about-image.png');
 export const sunshot = require('../images/sunshot-showcase.png');
 export const famfiction = require('../images/famfiction-showcase.png');
+export const vanhornContractors = require('../images/vanhorn-contractors-showcase.png');
 export const comingsoon = require('../images/coming-soon.png');
 export const cat = require('../images/cat.png');
 
