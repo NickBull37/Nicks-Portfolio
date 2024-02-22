@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.1caabd4f.css",
-    "main.js": "/static/js/main.3dd5237d.js",
+    "main.css": "/static/css/main.1a73f8fe.css",
+    "main.js": "/static/js/main.8201fe2f.js",
     "static/media/about-image.png": "/static/media/about-image.1daaacf6ab63c03c68a2.png",
     "static/media/hero-image.png": "/static/media/hero-image.fc79635370af8dd41233.png",
     "static/media/famfiction-showcase.png": "/static/media/famfiction-showcase.5556035b8388d007a163.png",
@@ -9,12 +9,13 @@
     "static/media/coming-soon.png": "/static/media/coming-soon.f23b02e26627d569d5e1.png",
     "static/media/sunshot-showcase.png": "/static/media/sunshot-showcase.3f5671b5a67680e3128b.png",
     "static/media/cat.png": "/static/media/cat.903a3b5a9513bc4cac31.png",
+    "static/media/millersville-logo.jpg": "/static/media/millersville-logo.36d88a60b8afd06d60f4.jpg",
     "index.html": "/index.html",
-    "main.1caabd4f.css.map": "/static/css/main.1caabd4f.css.map",
-    "main.3dd5237d.js.map": "/static/js/main.3dd5237d.js.map"
+    "main.1a73f8fe.css.map": "/static/css/main.1a73f8fe.css.map",
+    "main.8201fe2f.js.map": "/static/js/main.8201fe2f.js.map"
   },
   "entrypoints": [
-    "static/css/main.1caabd4f.css",
-    "static/js/main.3dd5237d.js"
+    "static/css/main.1a73f8fe.css",
+    "static/js/main.8201fe2f.js"
   ]
 }
