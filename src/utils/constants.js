@@ -1,5 +1,9 @@
 // Images
 export const aboutImage = require('../images/about-image.png');
+export const webstaurantLogo = require('../images/webstaurantstore-logo.png');
+export const clarityLogo = require('../images/clarity-logo.jpg');
+export const anovaaLogo = require('../images/anovaa-logo.png');
+export const millersvilleLogo = require('../images/millersville-logo.jpg');
 export const sunshot = require('../images/sunshot-showcase.png');
 export const famfiction = require('../images/famfiction-showcase.png');
 export const vanhornContractors = require('../images/vanhorn-contractors-showcase.png');

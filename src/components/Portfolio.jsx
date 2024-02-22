@@ -18,6 +18,28 @@ const Portfolio = () => {
                 </Typography>
                 <Box className="work-list">
                     <Box className="work">
+                        <img src={vanhornContractors} alt="Van Horn Contractors" />
+                        <Box className="layer">
+                            <Typography
+                                sx={{
+                                    fontSize: { xs: '1.5rem', md: '1.75rem' },
+                                    mb: { xs: '15px', md: '25px' }
+                                }}
+                            >
+                                Van Horn Contractors
+                            </Typography>
+                            <Typography
+                                textAlign="left"
+                                sx={{
+                                    mb: { xs: '0', md: '20px' }
+                                }}
+                            >
+                                    This is a website built to promote a local, family owned & operated contracting business Check it out at the link below!
+                            </Typography>
+                            <a href="https://vanhorncontractors.com/" target="_blank" rel="noreferrer">{upRightSquareIcon}</a>
+                        </Box>
+                    </Box>
+                    <Box className="work">
                         <img src={sunshot} alt="SunShot AI" />
                         <Box className="layer">
                             <Typography
@@ -37,28 +59,6 @@ const Portfolio = () => {
                                     This is a AI generation SaaS platform that supports text, code, image, music, and video generation. Try it out for free! Every new user gets 5 free generations.
                             </Typography>
                             <a href="https://sunshotai.com/" target="_blank" rel="noreferrer">{upRightSquareIcon}</a>
-                        </Box>
-                    </Box>
-                    <Box className="work">
-                        <img src={vanhornContractors} alt="Van Horn Contractors" />
-                        <Box className="layer">
-                            <Typography
-                                sx={{
-                                    fontSize: { xs: '1.5rem', md: '1.75rem' },
-                                    mb: { xs: '15px', md: '25px' }
-                                }}
-                            >
-                                Van Horn Contractors
-                            </Typography>
-                            <Typography
-                                textAlign="left"
-                                sx={{
-                                    mb: { xs: '0', md: '20px' }
-                                }}
-                            >
-                                    This is a website built to promote a local, family owned & operated contracting business Check it out at the link below!.
-                            </Typography>
-                            <a href="https://vanhorncontractors.com/" target="_blank" rel="noreferrer">{upRightSquareIcon}</a>
                         </Box>
                     </Box>
                     <Box className="work">
