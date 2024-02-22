@@ -20,7 +20,13 @@ const WorkHistory = () => {
                 </Typography>
                 <Box display={'flex'} gap={8} mt={'20px'}>
                     <Box>
-                        <Accordion sx={{ color: '#fff', backgroundColor: '#262626' }}>
+                        <Accordion
+                            sx={{
+                                color: '#fff',
+                                backgroundColor: '#262626',
+                                minHeight: '50px'
+                            }}
+                        >
                             <AccordionSummary
                                 expandIcon={<ExpandMoreIcon sx={{ color: '#fff' }} />}
                                 aria-controls="panel1-content"
@@ -90,12 +96,22 @@ const WorkHistory = () => {
                                 </Typography>
                                 <Box sx={{ px: 1 }}>
                                     <Typography><br /></Typography>
-                                    <Typography>
+                                    <Typography><br /></Typography>
+                                    <Typography variant='button' sx={{ fontStyle: 'bold', fontSize: '1rem', color: '#bfbfbf' }}>
+                                        My Role
+                                    </Typography>
+                                    <Typography sx={{ mt: 1 }}>
                                         I joined the WebstaurantStore.com mobile back-end team to assist creating the WebstaurantStore mobile app. My daily tasks 
-                                        usually involve building new features specific to the mobile app or recreating features from the desktop application. 
+                                        usually involve building new features specific to the mobile app or recreating features from the desktop application. Our 
+                                        goal is to provide a simple and intuitive experience while adding functionality only possible with a mobile device but still
+                                        maintaining parity with our desktop application.
                                     </Typography>
                                     <Typography><br /></Typography>
-                                    <Typography>
+                                    <Typography><br /></Typography>
+                                    <Typography variant='button' sx={{ fontStyle: 'bold', fontSize: '1rem', color: '#bfbfbf' }}>
+                                        Projects
+                                    </Typography>
+                                    <Typography sx={{ mt: 1 }}>
                                         My largest project so far is a mobile device Image Search feature which allows users to take a picture of a product 
                                         and search our product catalog for similar items. We utilize OpenAI and Tensorflow technologies to perform these 
                                         searches.
@@ -121,7 +137,13 @@ const WorkHistory = () => {
                                 </Button>
                             </AccordionActions>
                         </Accordion>
-                        <Accordion sx={{ color: '#fff', backgroundColor: '#262626' }}>
+                        <Accordion
+                            sx={{
+                                color: '#fff',
+                                backgroundColor: '#262626',
+                                minHeight: '50px'
+                            }}
+                        >
                             <AccordionSummary
                                 expandIcon={<ExpandMoreIcon sx={{ color: '#fff' }} />}
                                 aria-controls="panel2-content"
@@ -183,13 +205,26 @@ const WorkHistory = () => {
                                 </Typography>
                                 <Box sx={{ px: 1 }}>
                                     <Typography><br /></Typography>
-                                    <Typography>
+                                    <Typography><br /></Typography>
+                                    <Typography variant='button' sx={{ fontStyle: 'bold', fontSize: '1rem', color: '#bfbfbf' }}>
+                                        My Role
+                                    </Typography>
+                                    <Typography sx={{ mt: 1 }}>
                                         At Clarity, I was responsible for designing and implementing new features and client customizations for Clarity's 
                                         eCommerce platform. These updates mostly included updates to default business logic or integrations with new 3rd
                                         party systems.
                                     </Typography>
                                     <Typography><br /></Typography>
                                     <Typography>
+                                        Clarity also gave me the opportunity to lead multiple training sessions with the development team focused on various parts 
+                                        of the core platform. Each training session was approximately 1 hour 30 mins.
+                                    </Typography>
+                                    <Typography><br /></Typography>
+                                    <Typography><br /></Typography>
+                                    <Typography variant='button' sx={{ fontStyle: 'bold', fontSize: '1rem', color: '#bfbfbf' }}>
+                                        Projects
+                                    </Typography>
+                                    <Typography sx={{ mt: 1 }}>
                                         I completed several large integration projects including Paya payment processing, the National Weather Service, and HautAI.
                                         <ul className="pad-list">
                                             <li>Paya Payment Processing - for processing credit card and ACH payments</li>
@@ -199,15 +234,11 @@ const WorkHistory = () => {
                                     </Typography>
                                     <Typography><br /></Typography>
                                     <Typography>
-                                        I also designed and built a brand new platform AI Provider including an integration with Open AI's ChatGPT for generating 
-                                        client product details and images. The goal of this project was to use AI generation to reduce the amount of time & effort
+                                        I designed and built a brand new platform AI Provider including an integration with Open AI's ChatGPT for generating 
+                                        product details and images. The goal of this project was to use AI generation to reduce the amount of time & effort
                                         needed to update product details. 
                                     </Typography>
-                                    <Typography><br /></Typography>
-                                    <Typography>
-                                        Clarity also gave me the opportunity to lead multiple training sessions with the development team focused on various parts 
-                                        of the core platform. Each training session was approximately 1 hour 30 mins.
-                                    </Typography>
+                                    
                                     <Typography><br /></Typography>
                                 </Box>
                             </AccordionDetails>
@@ -229,7 +260,13 @@ const WorkHistory = () => {
                                 </Button>
                             </AccordionActions>
                         </Accordion>
-                        <Accordion sx={{ color: '#fff', backgroundColor: '#262626' }}>
+                        <Accordion
+                            sx={{
+                                color: '#fff',
+                                backgroundColor: '#262626',
+                                minHeight: '50px'
+                            }}
+                        >
                             <AccordionSummary
                                 expandIcon={<ExpandMoreIcon sx={{ color: '#fff' }} />}
                                 aria-controls="panel3-content"
@@ -291,25 +328,29 @@ const WorkHistory = () => {
                                 </Typography>
                                 <Box sx={{ px: 1 }}>
                                     <Typography><br /></Typography>
-                                    <Typography>
+                                    <Typography><br /></Typography>
+                                    <Typography variant='button' sx={{ fontStyle: 'bold', fontSize: '1rem', color: '#bfbfbf' }}>
+                                        My Role
+                                    </Typography>
+                                    <Typography sx={{ mt: 1 }}>
                                         Shortly after obtaining my degree, I started working at Entech (now Anovaa) on the Web Content Publishing Team. We were responsibile for 
                                         all content updates requested for 2 client websites and 3 corresponding microsites. The goal of this entry level team is to learn the company's,
-                                        system, clients, and application, then move up to an application team after 1 year. I worked on this team for 8 months before moving up to an 
-                                        application team.
+                                        system, clients, and application, then move up to an application team after 1 year. I worked on this team for 8 months before moving up to work on  
+                                        the application team for Entech's largest client. After another year and a half, I was brought onto the Anovaa platform team when all existing 
+                                        clients were being converted to the new system.
                                     </Typography>
                                     <Typography><br /></Typography>
-                                    <Typography>
+                                    <Typography><br /></Typography>
+                                    <Typography variant='button' sx={{ fontStyle: 'bold', fontSize: '1rem', color: '#bfbfbf' }}>
+                                        Projects
+                                    </Typography>
+                                    <Typography sx={{ mt: 1 }}>
                                         During my time with the WCP Team, my biggest project was the modernization of 100+ pages for the Citizens Bank  & Citizens One loan origination 
-                                        websites. For this project, I was responsibile for creating all new web pages and overseeing the entire production deployment.
+                                        websites. For this project, I was responsible for building each new web page and overseeing the entire production deployment.
                                     </Typography>
                                     <Typography><br /></Typography>
                                     <Typography>
-                                        I was then promoted to a full-stack position to work on the loan origination web application for Entech's largest client. Afterwards I was 
-                                        selected to join Entech's original Platform (Anovaa) team from a pool of existing development teams shortly before the initial release.
-                                    </Typography>
-                                    <Typography><br /></Typography>
-                                    <Typography>
-                                        While on this team, I designed and implemented a new process to reduce development time of client agnostic UI layout changes by 66%. Since the
+                                        While on the Anovaa team, I designed and implemented a new process to reduce development time of client agnostic UI layout changes by 66%. Since the
                                         platform was brand new, I also spent a lot of time writing new procedures & documentation for the new application.
                                     </Typography>
                                     <Typography><br /></Typography>
@@ -333,7 +374,13 @@ const WorkHistory = () => {
                                 </Button>
                             </AccordionActions>
                         </Accordion>
-                        <Accordion sx={{ color: '#fff', backgroundColor: '#262626' }}>
+                        <Accordion
+                            sx={{
+                                color: '#fff',
+                                backgroundColor: '#262626',
+                                minHeight: '50px'
+                            }}
+                        >
                             <AccordionSummary
                                 expandIcon={<ExpandMoreIcon sx={{ color: '#fff' }} />}
                                 aria-controls="panel3-content"
