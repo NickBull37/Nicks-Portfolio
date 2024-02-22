@@ -108,6 +108,8 @@ const WorkHistory = () => {
                                     Check out their link here
                                 </Typography>
                                 <Button
+                                    href='https://www.webstaurantstore.com/'
+                                    target='_blank'
                                     variant="contained"
                                     color="success"
                                     sx={{
@@ -188,7 +190,7 @@ const WorkHistory = () => {
                                     </Typography>
                                     <Typography><br /></Typography>
                                     <Typography>
-                                        I completed several large integration projects including Paya payment processing, the National Weather Service, and HautAI
+                                        I completed several large integration projects including Paya payment processing, the National Weather Service, and HautAI.
                                         <ul className="pad-list">
                                             <li>Paya Payment Processing - for processing credit card and ACH payments</li>
                                             <li>Haut AI - a SaaS provider that generates skin analysis reports for user uploaded images</li>
@@ -214,6 +216,8 @@ const WorkHistory = () => {
                                     Check out their link here
                                 </Typography>
                                 <Button
+                                    href='https://www.clarity-ventures.com/'
+                                    target='_blank'
                                     variant="contained"
                                     sx={{
                                         textTransform: 'none',
@@ -316,6 +320,8 @@ const WorkHistory = () => {
                                     Check out their link here
                                 </Typography>
                                 <Button
+                                    href='https://www.anovaa.com/'
+                                    target='_blank'
                                     variant="contained"
                                     color="primary"
                                     sx={{
@@ -411,12 +417,13 @@ const WorkHistory = () => {
                                     Check out their link here
                                 </Typography>
                                 <Button
+                                    href='https://www.millersville.edu/'
+                                    target='_blank'
                                     variant="contained"
                                     color='warning'
                                     sx={{
                                         textTransform: 'none',
                                         backgroundColor: '#b3b300',
-                                        // color: '#e6e600',
                                         ml: 1
                                     }}
                                 >

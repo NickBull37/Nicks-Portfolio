@@ -1,50 +1,204 @@
-import React, { useEffect, useState } from 'react';
-import { Box, Stack, Typography } from '@mui/material';
+import React, { useState } from 'react';
+import { Box, Stack, Typography, AppBar, Toolbar, IconButton, Menu, Container, Button, MenuItem } from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
+import DiamondIcon from '@mui/icons-material/Diamond';
 
 const Header = () => {
 
-    const [sideMenuOpen, setSideMenuOpen] = useState(false);
-
-    function toggleMenu() {
-        setSideMenuOpen(!sideMenuOpen);
-    }
-
-    useEffect(() => {
-        var menu = document.getElementById("sidemenu");
-        if (sideMenuOpen) {
-            menu.style.right = "0";
-        }
-        else {
-            menu.style.right = "-200px";
-        }
-    }, [sideMenuOpen])
+    const [anchorElNav, setAnchorElNav] = useState(null);
+  
+    const handleOpenNavMenu = (event) => {
+      setAnchorElNav(event.currentTarget);
+    };
+  
+    const handleCloseNavMenu = () => {
+      setAnchorElNav(null);
+    };
 
     return (
-        <Box id="header">
+        <Box pb={'2.5rem'}>
+            <AppBar position="static" elevation={0}
+                sx={{
+                    backgroundColor: '#080808'
+                }}
+            >
+                <Container maxWidth="xl">
+                    <Toolbar disableGutters>
+                        {/*---------------------------------- DESKTOP VIEW ----------------------------------*/}
+                        {/* <DiamondIcon
+                            className="color-acc"
+                            sx={{ display: { xs: 'none', md: 'flex' }, mr: 2 }}
+                        /> */}
+                        <Typography
+                            variant="h5"
+                            noWrap
+                            // component="a"
+                            // href="#app-bar-with-responsive-menu"
+                            sx={{
+                                mt: 2,
+                                display: { xs: 'none', md: 'flex' },
+                                // fontFamily: 'monospace',
+                                fontSize: '1.875rem',
+                                fontWeight: 700,
+                                letterSpacing: '.1rem',
+                                color: 'inherit',
+                                textDecoration: 'none',
+                                // Styles for border
+                                py: '5px',
+                                px: '20px',
+                                border: '1px solid #ff00ff',
+                                borderRadius: '10px'
+                            }}
+                        >
+                            Nick<span className="color-purple">'</span>s Portfolio
+                            {/* NICK<span className="color-purple">'</span>S PORTFOLIO */}
+                            {/* <span className="color-purple">[</span>NICK<span className="color-purple">'</span>S PORTFOLIO<span className="color-purple">]</span> */}
+                        </Typography>
+                        <Box
+                            justifyContent={'flex-end'}
+                            sx={{
+                                flexGrow: 1,
+                                display: { xs: 'none', md: 'flex' }
+                            }}
+                        >
+                            {/* {pages.map((page) => (
+                                <Button
+                                    className='hover-fade'
+                                    size='large'
+                                    key={page}
+                                    onClick={handleCloseNavMenu}
+                                    sx={{ my: 2, mx: 1, color: 'white', display: 'block' }}
+                                >
+                                    {page}
+                                </Button>
+                            ))} */}
+                            <Button
+                                className='hover-fade'
+                                size='large'
+                                key='About'
+                                href='#about'
+                                onClick={handleCloseNavMenu}
+                                sx={{ my: 2, mx: 1, color: 'white', display: 'block' }}
+                            >
+                                About
+                            </Button>
+                            <Button
+                                className='hover-fade'
+                                size='large'
+                                key='Services'
+                                href='#services'
+                                onClick={handleCloseNavMenu}
+                                sx={{ my: 2, mx: 1, color: 'white', display: 'block' }}
+                            >
+                                Services
+                            </Button>
+                            <Button
+                                className='hover-fade'
+                                size='large'
+                                key='Experience'
+                                href='#work-history'
+                                onClick={handleCloseNavMenu}
+                                sx={{ my: 2, mx: 1, color: 'white', display: 'block' }}
+                            >
+                                Experience
+                            </Button>
+                            <Button
+                                className='hover-fade'
+                                size='large'
+                                key='Portfolio'
+                                href='#portfolio'
+                                onClick={handleCloseNavMenu}
+                                sx={{ my: 2, mx: 1, color: 'white', display: 'block' }}
+                            >
+                                Portfolio
+                            </Button>
+                            <Button
+                                className='hover-fade'
+                                size='large'
+                                key='Contact'
+                                href='#contact'
+                                onClick={handleCloseNavMenu}
+                                sx={{ my: 2, mx: 1, color: 'white', display: 'block' }}
+                            >
+                                Contact
+                            </Button>
+                        </Box>
+                        {/*---------------------------------- MOBILE VIEW ----------------------------------*/}
+                        <DiamondIcon
+                            className="color-acc"
+                            sx={{
+                                display: { xs: 'flex', md: 'none' },
+                                ml: 1
+                            }}
+                        />
+                        <Typography
+                            variant="h5"
+                            noWrap
+                            component="a"
+                            href="#app-bar-with-responsive-menu"
+                            sx={{
+                                ml: 1,
+                                display: { xs: 'flex', md: 'none' },
+                                flexGrow: 1,
+                                fontFamily: 'monospace',
+                                fontWeight: 700,
+                                letterSpacing: '.3rem',
+                                color: 'inherit',
+                                textDecoration: 'none',
+                            }}
+                        >
+                            NICK<span className="color-purple">'</span>S PORTFOLIO
+                        </Typography>
+                        <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
+                            <IconButton
+                                size="large"
+                                aria-label="account of current user"
+                                aria-controls="menu-appbar"
+                                aria-haspopup="true"
+                                onClick={handleOpenNavMenu}
+                                color="inherit"
+                            >
+                                <MenuIcon />
+                            </IconButton>
+                            <Menu
+                                id="menu-appbar"
+                                anchorEl={anchorElNav}
+                                anchorOrigin={{
+                                    vertical: 'bottom',
+                                    horizontal: 'left',
+                                }}
+                                keepMounted
+                                transformOrigin={{
+                                    vertical: 'top',
+                                    horizontal: 'left',
+                                }}
+                                open={Boolean(anchorElNav)}
+                                onClose={handleCloseNavMenu}
+                                sx={{
+                                    display: { xs: 'block', md: 'none' },
+                                }}
+                            >
+                                <MenuItem key={'about'} onClick={handleCloseNavMenu}>
+                                    <Typography textAlign="center"><a href='#about'>About</a></Typography>
+                                </MenuItem>
+                                <MenuItem key={'services'} onClick={handleCloseNavMenu}>
+                                    <Typography textAlign="center"><a href='#services'>Services</a></Typography>
+                                </MenuItem>
+                                <MenuItem key={'experience'} onClick={handleCloseNavMenu}>
+                                    <Typography textAlign="center"><a href='#work-history'>Experience</a></Typography>
+                                </MenuItem>
+                                <MenuItem key={'portfolio'} onClick={handleCloseNavMenu}>
+                                    <Typography textAlign="center"><a href='#portfolio'>Portfolio</a></Typography>
+                                </MenuItem>
+                                <MenuItem href='#contact' key={'contact'} onClick={handleCloseNavMenu}>
+                                    <Typography textAlign="center"><a href='#contact'>Contact</a></Typography>
+                                </MenuItem>
+                            </Menu>
+                        </Box>
+                    </Toolbar>
+                </Container>
+            </AppBar>
             <Box className="container">
-                <nav>
-                    <Typography
-                        sx={{
-                            fontSize: { xs: '1.875rem', md: '1.875rem' },
-                            fontWeight: '600',
-                            mt: '15px',
-                            py: '5px',
-                            px: '20px',
-                            border: '1px solid #ff00ff',
-                            borderRadius: '10px'
-                        }}
-                    >
-                        Nick<span className="color-purple">'</span>s Portfolio
-                    </Typography>
-                    <ul id="sidemenu">
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <i className="fa-solid fa-xmark" onClick={() => toggleMenu()}></i>
-                    </ul>
-                    <i className="fa-solid fa-bars" onClick={() => toggleMenu()}></i>
-                </nav>
                 <Box
                     display="flex"
                     flexDirection={{ xs: 'column-reverse', md: 'row' }}
