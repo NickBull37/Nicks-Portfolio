@@ -464,6 +464,10 @@ form .btn2 {
         height: 93vh;
     }
 
+    .mobile-title {
+        font-size: 1.75rem;
+    }
+
     #hero-img {
         width: 85vw;
         height: 52vh;

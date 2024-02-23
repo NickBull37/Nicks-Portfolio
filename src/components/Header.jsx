@@ -32,8 +32,6 @@ const Header = () => {
                         <Typography
                             variant="h5"
                             noWrap
-                            // component="a"
-                            // href="#app-bar-with-responsive-menu"
                             sx={{
                                 mt: 2,
                                 display: { xs: 'none', md: 'flex' },
@@ -61,17 +59,6 @@ const Header = () => {
                                 display: { xs: 'none', md: 'flex' }
                             }}
                         >
-                            {/* {pages.map((page) => (
-                                <Button
-                                    className='hover-fade'
-                                    size='large'
-                                    key={page}
-                                    onClick={handleCloseNavMenu}
-                                    sx={{ my: 2, mx: 1, color: 'white', display: 'block' }}
-                                >
-                                    {page}
-                                </Button>
-                            ))} */}
                             <Button
                                 className='hover-fade'
                                 size='large'
@@ -124,32 +111,36 @@ const Header = () => {
                             </Button>
                         </Box>
                         {/*---------------------------------- MOBILE VIEW ----------------------------------*/}
-                        <DiamondIcon
+                        {/* <DiamondIcon
                             className="color-acc"
                             sx={{
                                 display: { xs: 'flex', md: 'none' },
                                 ml: 1
                             }}
-                        />
+                        /> */}
                         <Typography
+                            flexGrow={1}
+                            ml={1}
                             variant="h5"
                             noWrap
                             component="a"
                             href="#app-bar-with-responsive-menu"
                             sx={{
-                                ml: 1,
                                 display: { xs: 'flex', md: 'none' },
-                                flexGrow: 1,
                                 fontFamily: 'monospace',
                                 fontWeight: 700,
-                                letterSpacing: '.3rem',
+                                letterSpacing: '.1rem',
                                 color: 'inherit',
                                 textDecoration: 'none',
                             }}
                         >
-                            NICK<span className="color-purple">'</span>S PORTFOLIO
+                            <span className='color-purple'>[&nbsp;</span>NICK<span className="color-purple">'</span>S PORTFOLIO<span className='color-purple'>&nbsp;]</span>
                         </Typography>
-                        <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
+                        <Box
+                            sx={{
+                                display: { xs: 'flex', md: 'none' }
+                            }}
+                        >
                             <IconButton
                                 size="large"
                                 aria-label="account of current user"
