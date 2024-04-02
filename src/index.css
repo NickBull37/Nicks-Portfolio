@@ -33,6 +33,7 @@
 :root {
 
     /* ----------------- 1.1 Colors - Palette ----------------- */
+    --white: #fff;
     --purple: #ff00ff;
     --purple-dark: #990099;
 
@@ -78,6 +79,28 @@ a {
 /* ------------------- 3.1 Color  ------------------*/
 .color-purple {
     color: var(--purple);
+}
+
+.color-white {
+    color: var(--white)!important;
+}
+
+/* ------------------- 3.2 Font  -------------------*/
+.italic-header {
+    font-size: 1rem;
+    font-style: italic;
+}
+
+
+/* ------------------- 3.3 Images  ------------------*/
+.svg-img {
+    max-height: 35px;
+    max-width: 35px;
+}
+.svg-img-d3 {
+    max-height: 33px;
+    max-width: 33px;
+    border-radius: 0!important;
 }
 
 
@@ -441,6 +464,21 @@ form .btn2 {
 /********************************************************************************************************************************************
 *********************************************************** 10. MEDIA QUERIES ***************************************************************
 ********************************************************************************************************************************************/
+
+/* LAPTOP VIEW */
+@media only screen and (max-width: 1540px) {
+
+    .svg-img {
+        max-height: 27px;
+        max-width: 27px;
+    }
+    .svg-img-d3 {
+        max-height: 25px;
+        max-width: 25px;
+        border-radius: 0!important;
+    }
+    
+}
 
 /* TABLET VIEW */
 @media only screen and (max-width: 821px) {

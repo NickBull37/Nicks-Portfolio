@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography } from '@mui/material';
+import { Box, Typography, Tooltip } from '@mui/material';
 import { sunshot, famfiction, vanhornContractors, comingsoon } from '../utils/constants';
 import { upRightSquareIcon } from '../utils/constants';
 
@@ -36,6 +36,27 @@ const Portfolio = () => {
                             >
                                     This is a website built to promote a local, family owned & operated contracting business Check it out at the link below!
                             </Typography>
+                            <Box
+                                display={'flex'}
+                                gap={4}
+                                my={2}
+                            >
+                                <Tooltip title="React">
+                                    <img className="svg-img" src="/svgs/React.svg"></img>
+                                </Tooltip>
+                                <Tooltip title="HTML5">
+                                    <img className="svg-img" src="/svgs/html5.svg"></img>
+                                </Tooltip>
+                                <Tooltip title="CSS3">
+                                    <img className="svg-img" src="/svgs/css3.svg"></img>
+                                </Tooltip>
+                                <Tooltip title="Javascript">
+                                    <img className="svg-img" src="/svgs/javascript.svg"></img>
+                                </Tooltip>
+                                <Tooltip title="Material UI">
+                                    <img className="svg-img" src="/svgs/materialui.svg"></img>
+                                </Tooltip>
+                            </Box>
                             <a href="https://vanhorncontractors.com/" target="_blank" rel="noreferrer">{upRightSquareIcon}</a>
                         </Box>
                     </Box>
@@ -58,20 +79,79 @@ const Portfolio = () => {
                             >
                                     This is a AI generation SaaS platform that supports text, code, image, music, and video generation. Try it out for free! Every new user gets 5 free generations.
                             </Typography>
+                            <Box
+                                display={'flex'}
+                                gap={4}
+                                my={2}
+                            >
+                                <Tooltip title="TypeScript">
+                                    <img className="svg-img" src="/svgs/typescript.svg"></img>
+                                </Tooltip>
+                                <Tooltip title="NextJS">
+                                    <img className="svg-img" src="/svgs/nextjs.svg"></img>
+                                </Tooltip>
+                                <Tooltip title="Prisma">
+                                    <img className="svg-img-d3" src="/svgs/prisma.svg"></img>
+                                </Tooltip>
+                                <Tooltip title="ChatGPT">
+                                    <img className="svg-img" src="/svgs/chatgpt.svg"></img>
+                                </Tooltip>
+                                <Tooltip title="HTML5">
+                                    <img className="svg-img" src="/svgs/html5.svg"></img>
+                                </Tooltip>
+                                <Tooltip title="CSS3">
+                                    <img className="svg-img" src="/svgs/css3.svg"></img>
+                                </Tooltip>
+                            </Box>
+                            {/* Below box is for CSharpAnalyzer when its finished */}
+                            {/* <Box
+                                display={'flex'}
+                                gap={4}
+                                my={2}
+                            >
+                                <Tooltip title="C#">
+                                    <img className="svg-img" src="/svgs/csharp.svg"></img>
+                                </Tooltip>
+                                <Tooltip title="D3">
+                                    <img className="svg-img-d3" src="/svgs/d3.svg"></img>
+                                </Tooltip>
+                                <Tooltip title="Javascript">
+                                    <img className="svg-img" src="/svgs/javascript.svg"></img>
+                                </Tooltip>
+                                <Tooltip title="HTML5">
+                                    <img className="svg-img" src="/svgs/html5.svg"></img>
+                                </Tooltip>
+                                <Tooltip title="CSS3">
+                                    <img className="svg-img" src="/svgs/css3.svg"></img>
+                                </Tooltip>
+                            </Box> */}
                             <a href="https://sunshotai.com/" target="_blank" rel="noreferrer">{upRightSquareIcon}</a>
                         </Box>
                     </Box>
                     <Box className="work">
                         <img src={famfiction} alt="Fam-Fiction" />
                         <Box className="layer">
-                            <Typography
-                                sx={{
-                                    fontSize: { xs: '1.5rem', md: '1.75rem' },
-                                    mb: { xs: '15px', md: '25px' }
-                                }}
+                            <Box
+                                display="flex"
+                                alignItems="baseline"
+                                gap={1}
                             >
-                                FamFiction
-                            </Typography>
+                                <Typography
+                                    sx={{
+                                        fontSize: { xs: '1.5rem', md: '1.75rem' },
+                                        mb: { xs: '15px', md: '25px' }
+                                    }}
+                                >
+                                    FamFiction
+                                </Typography>
+                                <Typography
+                                    sx={{
+                                        fontStyle: 'italic',
+                                    }}
+                                >
+                                    (in-progress)
+                                </Typography>
+                            </Box>
                             <Typography
                                 textAlign="left"
                                 sx={{
@@ -80,15 +160,39 @@ const Portfolio = () => {
                             >
                                 A collaborative story builder and reading environment. Contribute to ongoing stories by writing or designing story art. Checkout the source code using the github link below.
                             </Typography>
-                            <Typography
+                            {/* <Typography
                                 variant='body1'
-                                pt={2}
+                                pt={1}
                                 sx={{
                                     pb: { xs: '0', md: '8px' }
                                 }}
                             >
                                 WORK IN PROGRESS
-                            </Typography>
+                            </Typography> */}
+                            <Box
+                                display={'flex'}
+                                gap={4}
+                                my={2}
+                            >
+                                <Tooltip title="React">
+                                    <img className="svg-img" src="/svgs/React.svg"></img>
+                                </Tooltip>
+                                <Tooltip title="NodeJS">
+                                    <img className="svg-img" src="/svgs/nodejs.svg"></img>
+                                </Tooltip>
+                                <Tooltip title="HTML5">
+                                    <img className="svg-img" src="/svgs/html5.svg"></img>
+                                </Tooltip>
+                                <Tooltip title="CSS3">
+                                    <img className="svg-img" src="/svgs/css3.svg"></img>
+                                </Tooltip>
+                                <Tooltip title="Material UI">
+                                    <img className="svg-img" src="/svgs/materialui.svg"></img>
+                                </Tooltip>
+                                <Tooltip title="SQLite">
+                                    <img className="svg-img" src="/svgs/sqlite.svg"></img>
+                                </Tooltip>
+                            </Box>
                             <a href="https://github.com/NickBull37/Fam-Fiction" target="_blank" rel="noreferrer">{upRightSquareIcon}</a>
                         </Box>
                     </Box>
