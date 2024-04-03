@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.b7a53efb.css",
-    "main.js": "/static/js/main.d1ca8869.js",
+    "main.css": "/static/css/main.a0478f36.css",
+    "main.js": "/static/js/main.b8afc8a2.js",
     "static/media/about-image.png": "/static/media/about-image.1daaacf6ab63c03c68a2.png",
     "static/media/hero-image.png": "/static/media/hero-image.fc79635370af8dd41233.png",
     "static/media/famfiction-showcase.png": "/static/media/famfiction-showcase.5556035b8388d007a163.png",
@@ -11,11 +11,11 @@
     "static/media/cat.png": "/static/media/cat.903a3b5a9513bc4cac31.png",
     "static/media/millersville-logo.jpg": "/static/media/millersville-logo.36d88a60b8afd06d60f4.jpg",
     "index.html": "/index.html",
-    "main.b7a53efb.css.map": "/static/css/main.b7a53efb.css.map",
-    "main.d1ca8869.js.map": "/static/js/main.d1ca8869.js.map"
+    "main.a0478f36.css.map": "/static/css/main.a0478f36.css.map",
+    "main.b8afc8a2.js.map": "/static/js/main.b8afc8a2.js.map"
   },
   "entrypoints": [
-    "static/css/main.b7a53efb.css",
-    "static/js/main.d1ca8869.js"
+    "static/css/main.a0478f36.css",
+    "static/js/main.b8afc8a2.js"
   ]
 }
