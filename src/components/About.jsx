@@ -1,24 +1,57 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { aboutImage } from '../utils/constants';
-import { Box, List, ListItem, ListItemText, Typography } from '@mui/material';
+import { Box, Typography, Tabs, Tab } from '@mui/material';
+import PropTypes from 'prop-types';
 import OpenInNewRoundedIcon from '@mui/icons-material/OpenInNewRounded';
+
+function CustomTabPanel(props) {
+
+    const { children, value, index, ...other } = props;
+  
+    return (
+        <div
+            role="tabpanel"
+            hidden={value !== index}
+            id={`simple-tabpanel-${index}`}
+            aria-labelledby={`simple-tab-${index}`}
+            {...other}
+        >
+            {value === index && (
+                <Box sx={{ p: 3 }}>
+                    <Typography>{children}</Typography>
+                </Box>
+            )}
+        </div>
+    );
+}
+
+CustomTabPanel.propTypes = {
+    children: PropTypes.node,
+    index: PropTypes.number.isRequired,
+    value: PropTypes.number.isRequired,
+};
+  
+function a11yProps(index) {
+    return {
+        id: `simple-tab-${index}`,
+        'aria-controls': `simple-tabpanel-${index}`,
+    };
+}
 
 const About = () => {
 
-    const [activeTabLink, setActiveTabLink] = useState('skills');
-    const [activeTabContent, setActiveTabContent] = useState('skills');
+    const [value, setValue] = React.useState(0);
 
-    function opentab(tabname){
-        setActiveTabLink(tabname);
-        setActiveTabContent(tabname);
-    }
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
+    };
 
     return (
         <Box
             id="about"
             sx={{
-                pt: { xs: '0', md: '40px' },
-                pb: '40px',
+                pt: { xs: 8, md: 12 },
+                pb: 4,
                 px: '0',
                 color: '#ababab'
             }}
@@ -48,170 +81,153 @@ const About = () => {
                             out with my friends, and cheering on the Philadelphia sports teams.
                         </Typography>
                         <Box
-                            display={'flex'}
-                            justifyContent={{ xs: 'space-between', md: 'inherit' }}
-                            gap={{ xs: 0, md: 8 }}
                             sx={{
-                                mt: '40px',
-                                mb: '10px'
+                                width: '100%',
+                                mt: "1rem"
                             }}
                         >
-                            <Typography
-                                className={`tab-links ${activeTabLink === 'skills' ? 'active-link' : ''}`}
-                                onClick={() => opentab('skills')}
+                            <Box
                                 sx={{
-                                    fontSize: '1.375rem',
-                                    fontWeight: '600',
+                                    borderBottom: 1,
+                                    borderColor: 'divider'
                                 }}
                             >
-                                Skills
-                            </Typography>
-                            <Typography
-                                className={`tab-links ${activeTabLink === 'experience' ? 'active-link' : ''}`}
-                                onClick={() => opentab('experience')}
-                                sx={{
-                                    fontSize: '1.375rem',
-                                    fontWeight: '600',
-                                }}
-                            >
-                                Experience
-                            </Typography>
-                            <Typography
-                                className={`tab-links ${activeTabLink === 'technologies' ? 'active-link' : ''}`}
-                                onClick={() => opentab('technologies')}
-                                sx={{
-                                    fontSize: '1.375rem',
-                                    fontWeight: '600',
-                                }}
-                            >
-                                Tools
-                            </Typography>
-                        </Box>
-                        <Box
-                            id="skills"
-                            className={`tab-contents ${activeTabContent === 'skills' ? 'active-tab' : ''}`}
-                        >
-                            <List>
-                                <ListItem sx={{ px: 0 }}>
-                                    <ListItemText
-                                        primary="API Development"
-                                        secondary="Building fast and scalable RESTful APIs"
-                                        secondaryTypographyProps={{ fontSize: '1.125rem', color: '#ababab', pt: '2px' }}
-                                        sx={{ color: '#990099' }}
-                                    />
-                                </ListItem>
-                                <ListItem sx={{ px: 0 }}>
-                                    <ListItemText
-                                        primary="External Integrations"
-                                        secondary="Creating reliable integrations with 3rd party services"
-                                        secondaryTypographyProps={{ fontSize: '1.125rem', color: '#ababab', pt: '2px' }}
-                                        sx={{ color: '#990099' }}
-                                    />
-                                </ListItem>
-                                <ListItem sx={{ px: 0 }}>
-                                    <ListItemText
-                                        primary="UI/UX Design"
-                                        secondary="Designing Web/App interfaces"
-                                        secondaryTypographyProps={{ fontSize: '1.125rem', color: '#ababab', pt: '2px' }}
-                                        sx={{ color: '#990099' }}
-                                    />
-                                </ListItem>
-                            </List>
-                        </Box>
-                        <Box
-                            id="experience"
-                            className={`tab-contents ${activeTabContent === 'experience' ? 'active-tab' : ''}`}
-                        >
-                            <List>
-                                <ListItem sx={{ px: 0 }}>
-                                    <ListItemText
-                                        primary="2023 - Current"
-                                        secondary={
-                                            <span>
-                                                Software developer at WebstaurantStore.com{' '}
-                                                <a
-                                                    href="https://www.webstaurantstore.com/"
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                >
-                                                    <OpenInNewRoundedIcon fontSize='small' sx={{ color: "#ff00ff", ml: 1 }} />
-                                                </a>
-                                            </span>
-                                        }
-                                        secondaryTypographyProps={{ fontSize: '1.125rem', color: '#ababab', pt: '2px' }}
-                                        sx={{ color: '#990099' }}
-                                    />
-                                </ListItem>
-                                <ListItem sx={{ px: 0 }}>
-                                    <ListItemText
-                                        primary="2023 - 2023"
-                                        secondary={
-                                            <span>
-                                                Software developer at Clarity Ventures, Inc.{' '}
-                                                <a
-                                                    href="https://www.clarity-ventures.com/"
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                >
-                                                    <OpenInNewRoundedIcon fontSize='small' sx={{ color: "#ff00ff", ml: 1 }} />
-                                                </a>
-                                            </span>
-                                        }
-                                        secondaryTypographyProps={{ fontSize: '1.125rem', color: '#ababab', pt: '2px' }}
-                                        sx={{ color: '#990099' }}
-                                    />
-                                </ListItem>
-                                <ListItem sx={{ px: 0 }}>
-                                    <ListItemText
-                                        primary="2019 - 2022"
-                                        secondary={
-                                            <span>
-                                                Software developer at Anovaa{' '}
-                                                <a
-                                                    href="https://www.anovaa.com/"
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                >
-                                                    <OpenInNewRoundedIcon fontSize='small' sx={{ color: "#ff00ff", ml: 1 }} />
-                                                </a>
-                                            </span>
-                                        }
-                                        secondaryTypographyProps={{ fontSize: '1.125rem', color: '#ababab', pt: '2px' }}
-                                        sx={{ color: '#990099' }}
-                                    />
-                                </ListItem>
-                            </List>
-                        </Box>
-                        <Box
-                            id="technologies"
-                            className={`tab-contents ${activeTabContent === 'technologies' ? 'active-tab' : ''}`}
-                        >
-                            <List>
-                                <ListItem  sx={{ px: 0 }}>
-                                    <ListItemText
-                                        primary=".NET / ASP.NET"
-                                        secondary="Developing clean & scalable web applications"
-                                        secondaryTypographyProps={{ fontSize: '1.125rem', color: '#ababab', pt: '2px' }}
-                                        sx={{ color: '#990099' }}
-                                    />
-                                </ListItem>
-                                <ListItem  sx={{ px: 0 }}>
-                                    <ListItemText
-                                        primary="Entity Framework"
-                                        secondary="Advanced data mapping using EF and LINQ"
-                                        secondaryTypographyProps={{ fontSize: '1.125rem', color: '#ababab', pt: '2px' }}
-                                        sx={{ color: '#990099' }}
-                                    />
-                                </ListItem>
-                                <ListItem  sx={{ px: 0 }}>
-                                    <ListItemText
-                                        primary="React JS / Material UI"
-                                        secondary="Developing mobile responsive front-end solutions"
-                                        secondaryTypographyProps={{ fontSize: '1.125rem', color: '#ababab', pt: '2px' }}
-                                        sx={{ color: '#990099' }}
-                                    />
-                                </ListItem>
-                            </List>
+                                <Tabs
+                                    value={value}
+                                    variant="fullWidth"
+                                    textColor="secondary"
+                                    indicatorColor="secondary"
+                                    onChange={handleChange}
+                                    aria-label="About me tabs"
+                                >
+                                    <Tab label="Skills" {...a11yProps(0)} />
+                                    <Tab label="Experience" {...a11yProps(1)} />
+                                    <Tab label="Tools" {...a11yProps(2)} />
+                                </Tabs>
+                            </Box>
+                            <CustomTabPanel value={value} index={0}>
+                                <Typography variant='body2' className="about-mini-header">
+                                    API Development
+                                </Typography>
+                                <Typography
+                                    sx={{
+                                        fontSize: { xs: '1.125rem', md: '1.25rem' },
+                                        mb: 2
+                                    }}
+                                >
+                                    Building fast and scalable RESTful APIs
+                                </Typography>
+                                <Typography variant='body2' className="about-mini-header">
+                                    External Integrations
+                                </Typography>
+                                <Typography
+                                    sx={{
+                                        fontSize: { xs: '1.125rem', md: '1.25rem' },
+                                        mb: 2
+                                    }}
+                                >
+                                    Creating reliable integrations with 3rd party services
+                                </Typography>
+                                <Typography variant='body2' className="about-mini-header">
+                                    UI/UX Design
+                                </Typography>
+                                <Typography
+                                    sx={{
+                                        fontSize: { xs: '1.125rem', md: '1.25rem' }
+                                    }}
+                                >
+                                    Designing Web/App interfaces
+                                </Typography>
+                            </CustomTabPanel>
+                            <CustomTabPanel value={value} index={1}>
+                                <Typography variant='body2' className="about-mini-header">
+                                    2023 - Current
+                                </Typography>
+                                <Typography
+                                    sx={{
+                                        fontSize: { xs: '1.125rem', md: '1.25rem' },
+                                        mb: 2
+                                    }}
+                                >
+                                    Software developer at WebstaurantStore.com
+                                    <a
+                                        href="https://www.webstaurantstore.com/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <OpenInNewRoundedIcon fontSize='small' sx={{ color: "rgb(200, 90, 218)", ml: 1 }} />
+                                    </a>
+                                </Typography>
+                                <Typography variant='body2' className="about-mini-header">
+                                    2023 - 2023
+                                </Typography>
+                                <Typography
+                                    sx={{
+                                        fontSize: { xs: '1.125rem', md: '1.25rem' },
+                                        mb: 2
+                                    }}
+                                >
+                                    Software developer at Clarity Ventures, Inc.
+                                    <a
+                                        href="https://www.clarity-ventures.com/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <OpenInNewRoundedIcon fontSize='small' sx={{ color: "rgb(200, 90, 218)", ml: 1 }} />
+                                    </a>
+                                </Typography>
+                                <Typography variant='body2' className="about-mini-header">
+                                    2019 - 2022
+                                </Typography>
+                                <Typography
+                                    sx={{
+                                        fontSize: { xs: '1.125rem', md: '1.25rem' }
+                                    }}
+                                >
+                                    Junior Software developer at Anovaa
+                                    <a
+                                        href="https://www.anovaa.com/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <OpenInNewRoundedIcon fontSize='small' sx={{ color: "rgb(200, 90, 218)", ml: 1 }} />
+                                    </a>
+                                </Typography>
+                            </CustomTabPanel>
+                            <CustomTabPanel value={value} index={2}>
+                                <Typography variant='body2' className="about-mini-header">
+                                    .NET / ASP.NET
+                                </Typography>
+                                <Typography
+                                    sx={{
+                                        fontSize: { xs: '1.125rem', md: '1.25rem' },
+                                        mb: 2
+                                    }}
+                                >
+                                    Developing clean & scalable web applications
+                                </Typography>
+                                <Typography variant='body2' className="about-mini-header">
+                                    Entity Framework
+                                </Typography>
+                                <Typography
+                                    sx={{
+                                        fontSize: { xs: '1.125rem', md: '1.25rem' },
+                                        mb: 2
+                                    }}
+                                >
+                                    Advanced data mapping using EF and LINQ
+                                </Typography>
+                                <Typography variant='body2' className="about-mini-header">
+                                    React JS / Material UI
+                                </Typography>
+                                <Typography
+                                    sx={{
+                                        fontSize: { xs: '1.125rem', md: '1.25rem' },
+                                    }}
+                                >
+                                    Developing mobile responsive front-end solutions
+                                </Typography>
+                            </CustomTabPanel>
                         </Box>
                     </Box>
                 </Box>

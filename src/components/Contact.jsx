@@ -65,7 +65,7 @@ const Contact = () => {
     };
 
     return (
-        <Box id="contact" sx={{mt: '30px'}}>
+        <Box id="contact" sx={{mt: '50px'}}>
             <Box className="container">
                 <Box className="row">
                     <Box

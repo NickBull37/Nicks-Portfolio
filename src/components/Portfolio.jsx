@@ -38,7 +38,8 @@ const Portfolio = () => {
                             </Typography>
                             <Box
                                 display={'flex'}
-                                gap={4}
+                                width={"100%"}
+                                justifyContent="space-between"
                                 my={2}
                             >
                                 <Tooltip title="React">
@@ -81,7 +82,8 @@ const Portfolio = () => {
                             </Typography>
                             <Box
                                 display={'flex'}
-                                gap={4}
+                                width={"100%"}
+                                justifyContent="space-between"
                                 my={2}
                             >
                                 <Tooltip title="TypeScript">
@@ -95,6 +97,9 @@ const Portfolio = () => {
                                 </Tooltip>
                                 <Tooltip title="ChatGPT">
                                     <img className="svg-img" src="/svgs/chatgpt.svg"></img>
+                                </Tooltip>
+                                <Tooltip title="Stripe">
+                                    <img className="svg-img" src="/svgs/stripe.svg"></img>
                                 </Tooltip>
                                 <Tooltip title="HTML5">
                                     <img className="svg-img" src="/svgs/html5.svg"></img>
@@ -160,20 +165,15 @@ const Portfolio = () => {
                             >
                                 A collaborative story builder and reading environment. Contribute to ongoing stories by writing or designing story art. Checkout the source code using the github link below.
                             </Typography>
-                            {/* <Typography
-                                variant='body1'
-                                pt={1}
-                                sx={{
-                                    pb: { xs: '0', md: '8px' }
-                                }}
-                            >
-                                WORK IN PROGRESS
-                            </Typography> */}
                             <Box
                                 display={'flex'}
-                                gap={4}
+                                width={"100%"}
+                                justifyContent="space-between"
                                 my={2}
                             >
+                                <Tooltip title="C#">
+                                    <img className="svg-img" src="/svgs/csharp.svg"></img>
+                                </Tooltip>
                                 <Tooltip title="React">
                                     <img className="svg-img" src="/svgs/React.svg"></img>
                                 </Tooltip>
