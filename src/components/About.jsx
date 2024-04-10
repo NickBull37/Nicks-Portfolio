@@ -76,20 +76,22 @@ const About = () => {
                                 fontSize: { xs: '1rem', md: '1.125rem' }
                             }}
                         >
-                            I am a full-stack software developer with 5+ years experience working primarily on .NET applications. As a dedicated problem solver, I have focused
+                            I am a full-stack software developer with 5+ years experience working primarily on .NET applications. I am focused
                             on developing simple, efficient, & scalable solutions that solve complex problems. Outside of work, I enjoy playing Destiny 2 or a good game of chess, hanging 
                             out with my friends, and cheering on the Philadelphia sports teams.
                         </Typography>
                         <Box
                             sx={{
                                 width: '100%',
-                                mt: "1rem"
+                                mt: "1rem",
+                                backgroundColor: '#262626',
+                                borderRadius: '10px'
                             }}
                         >
                             <Box
                                 sx={{
                                     borderBottom: 1,
-                                    borderColor: 'divider'
+                                    borderColor: 'divider',
                                 }}
                             >
                                 <Tabs
@@ -100,12 +102,15 @@ const About = () => {
                                     onChange={handleChange}
                                     aria-label="About me tabs"
                                 >
-                                    <Tab label="Skills" {...a11yProps(0)} />
-                                    <Tab label="Experience" {...a11yProps(1)} />
-                                    <Tab label="Tools" {...a11yProps(2)} />
+                                    <Tab label="Skills" {...a11yProps(0)} sx={{ color: '#ababab;' }} />
+                                    <Tab label="Experience" {...a11yProps(1)} sx={{ color: '#ababab;' }} />
+                                    <Tab label="Tools" {...a11yProps(2)} sx={{ color: '#ababab;' }} />
                                 </Tabs>
                             </Box>
-                            <CustomTabPanel value={value} index={0}>
+                            <CustomTabPanel
+                                value={value}
+                                index={0}
+                            >
                                 <Typography variant='body2' className="about-mini-header">
                                     API Development
                                 </Typography>
