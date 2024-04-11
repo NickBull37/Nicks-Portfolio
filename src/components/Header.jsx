@@ -25,22 +25,11 @@ const Header = () => {
                 <Container maxWidth="xl">
                     <Toolbar disableGutters>
                         {/*---------------------------------- DESKTOP VIEW ----------------------------------*/}
-                        {/* <DiamondIcon
-                            className="color-acc"
-                            sx={{ display: { xs: 'none', md: 'flex' }, mr: 2 }}
-                        /> */}
                         <Typography
-                            variant="h5"
-                            noWrap
+                            className="progress"
                             sx={{
                                 mt: 2,
                                 display: { xs: 'none', md: 'flex' },
-                                // fontFamily: 'monospace',
-                                fontSize: '1.875rem',
-                                fontWeight: 700,
-                                letterSpacing: '.1rem',
-                                color: 'inherit',
-                                textDecoration: 'none',
                                 // Styles for border
                                 py: '5px',
                                 px: '20px',
@@ -49,8 +38,6 @@ const Header = () => {
                             }}
                         >
                             Nick<span className="color-purple">'</span>s Portfolio
-                            {/* NICK<span className="color-purple">'</span>S PORTFOLIO */}
-                            {/* <span className="color-purple">[</span>NICK<span className="color-purple">'</span>S PORTFOLIO<span className="color-purple">]</span> */}
                         </Typography>
                         <Box
                             justifyContent={'flex-end'}
@@ -205,7 +192,7 @@ const Header = () => {
                                 
                             }}
                         >
-                            Hi, my name is<br /><span className="color-purple">Nick Bulisky</span>
+                            Hi, my name is<br /><span className="color-purple brave-h2">Nick Bulisky</span>
                         </Typography>
                         <Typography
                             display={{ xs: 'none', md: 'block' }}

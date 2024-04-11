@@ -71,6 +71,19 @@ a {
     text-decoration: none;
 }
 
+/* ------------------ Additional fonts added ------------------ */
+@font-face {
+    font-family: 'Progress';
+    src: local('Progress'),
+         url('./fonts/Progress.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Brave';
+    src: local('Brave'),
+         url('./fonts/Brave.ttf') format('truetype');
+}
+
 
 /********************************************************************************************************************************************
 ************************************************************ 3. GENERIC STYLES **************************************************************
@@ -89,6 +102,31 @@ a {
 .italic-header {
     font-size: 1rem;
     font-style: italic;
+}
+
+/* Progress */
+.progress {
+    font-family: Progress !important;
+    font-weight: 300;
+    font-size: 1.5rem!important;
+    letter-spacing: .2rem !important;
+}
+
+.progress-h2 {
+    font-family: Progress !important;
+    font-weight: 300;
+    font-size: 3.25rem!important;
+    line-height: 1.2;
+    letter-spacing: 0.3rem !important;
+}
+
+/* Brave */
+.brave-h2 {
+    font-family: Brave !important;
+    /* font-weight: 300; */
+    /* font-size: 3.5rem!important; */
+    /* line-height: 1.2; */
+    letter-spacing: 0.05em;
 }
 
 

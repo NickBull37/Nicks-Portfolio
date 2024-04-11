@@ -101,14 +101,15 @@ const WorkHistory = () => {
                                         My Role
                                     </Typography>
                                     <Typography sx={{ mt: 1 }}>
-                                        I joined the WebstaurantStore.com mobile back-end team to assist creating the WebstaurantStore mobile app. My daily tasks 
-                                        usually involve building new features specific to the mobile app or recreating features from the desktop application. Our 
-                                        goal is to provide a simple and intuitive experience while adding functionality only possible with a mobile device but still
-                                        maintaining parity with our desktop application.
+                                        I joined the WebstaurantStore.com mobile back-end team to assist with development of the WebstaurantStore mobile app. My daily 
+                                        responsibilities include building new features specific to the mobile app or recreating features from the desktop application. 
+                                        I felt right at home when I started here and was able to jump in and start contributing almost immediately. I've really enjoyed 
+                                        the dynamic of my team and the environment we work in. I'm still pretty new in this role but I feel confident in skills here and 
+                                        I'm ready to make a positive impact any way I can. 
                                     </Typography>
                                     <Typography><br /></Typography>
                                     <Typography><br /></Typography>
-                                    <Typography variant='button' sx={{ fontStyle: 'bold', fontSize: '1rem', color: '#bfbfbf' }}>
+                                    {/* <Typography variant='button' sx={{ fontStyle: 'bold', fontSize: '1rem', color: '#bfbfbf' }}>
                                         Projects
                                     </Typography>
                                     <Typography sx={{ mt: 1 }}>
@@ -116,7 +117,7 @@ const WorkHistory = () => {
                                         and search our product catalog for similar items. We utilize OpenAI and Tensorflow technologies to perform these 
                                         searches.
                                     </Typography>
-                                    <Typography><br /></Typography>
+                                    <Typography><br /></Typography> */}
                                 </Box>
                             </AccordionDetails>
                             <AccordionActions>
@@ -210,14 +211,19 @@ const WorkHistory = () => {
                                         My Role
                                     </Typography>
                                     <Typography sx={{ mt: 1 }}>
-                                        At Clarity, I was responsible for designing and implementing new features and client customizations for Clarity's 
-                                        eCommerce platform. These updates mostly included updates to default business logic or integrations with new 3rd
-                                        party systems.
+                                        Clarity was an amazing company to work for and really enjoyed the time I spent here. Even if it was only 6 months, I made 
+                                        incredible strides here as a developer and met some fantastic people along the way. The company's enthusiasm for the work that they do and the 
+                                        level of talent among the dev teams are truly unmatched. At Clarity, I was responsible for 
+                                        designing and implementing new features and client customizations for Clarity's eCommerce platform. This mostly 
+                                        included updates to default business logic requested by the client or integrations with new 3rd party systems to support 
+                                        upcoming features.
                                     </Typography>
                                     <Typography><br /></Typography>
                                     <Typography>
-                                        Clarity also gave me the opportunity to lead multiple training sessions with the development team focused on various parts 
-                                        of the core platform. Each training session was approximately 1 hour 30 mins.
+                                        Clarity also holds training sessions for each team 2 hours every week. For developers, that meant a rotating schedule of team members picking 
+                                        a topic and running a training session. Topics were compiled by the team and consisted of new technologies, internal systems, common mistakes, 
+                                        and more. I had the opportunity to lead multiple training sessions with the development team focused on various parts of the core platform, 
+                                        each session being approximately 1 hour 30 mins.
                                     </Typography>
                                     <Typography><br /></Typography>
                                     <Typography><br /></Typography>
@@ -229,14 +235,15 @@ const WorkHistory = () => {
                                         <ul className="pad-list">
                                             <li>Paya Payment Processing - for processing credit card and ACH payments</li>
                                             <li>Haut AI - a SaaS provider that generates skin analysis reports for user uploaded images</li>
-                                            <li>National Weather Service - for limiting shipping options based on forecasted temperature</li>
+                                            <li>National Weather Service - to limit shipping options based on forecasted temperatures</li>
                                         </ul>
                                     </Typography>
                                     <Typography><br /></Typography>
                                     <Typography>
-                                        I designed and built a brand new platform AI Provider including an integration with Open AI's ChatGPT for generating 
-                                        product details and images. The goal of this project was to use AI generation to reduce the amount of time & effort
-                                        needed to update product details. 
+                                        Along with these projects, I also designed and implemented a brand new platform AI Provider including an integration with Open 
+                                        AI's ChatGPT for generating product details and images. The goal of this project was to use AI generation to reduce the amount 
+                                        of time & effort needed to update product details compared to doing it by hand. This was definitely my favorite project during 
+                                        my time here. It allowed me to work with a new popular technology and presented a lot of unique problems to solve. 
                                     </Typography>
                                     
                                     <Typography><br /></Typography>
@@ -333,11 +340,14 @@ const WorkHistory = () => {
                                         My Role
                                     </Typography>
                                     <Typography sx={{ mt: 1 }}>
-                                        Shortly after obtaining my degree, I started working at Entech (now Anovaa) on the Web Content Publishing Team. We were responsibile for 
-                                        all content updates requested for 2 client websites and 3 corresponding microsites. The goal of this entry level team is to learn the company's,
-                                        system, clients, and application, then move up to an application team after 1 year. I worked on this team for 8 months before moving up to work on  
-                                        the application team for Entech's largest client. After another year and a half, I was brought onto the Anovaa platform team when all existing 
-                                        clients were being converted to the new system.
+                                        Shortly after obtaining my degree, I began my career at Entech (now Anovaa) on the Web Content Publishing Team. We were responsibile 
+                                        for all content updates requested for 2 client websites and 3 corresponding microsites. The goal of this entry level team was to 
+                                        learn the company's, history, mission, clients, and applications, then move up to a Client Application team after 1 year. I worked 
+                                        on this team for 8 months before moving up to work on the application team for Entech's largest client. Entech was in the process of 
+                                        building a brand new, state of the art, loan origination platform, that would later be known as Anovaa, which had been in development 
+                                        for the past 5 years. After a year and a half working on a CA team, the individual client teams were condensed down to one Platform 
+                                        Team. I was brought on to this "Anovaa" team to assist with the final stages on production and to convert all existing clients were 
+                                        being converted to the new system.
                                     </Typography>
                                     <Typography><br /></Typography>
                                     <Typography><br /></Typography>
@@ -345,12 +355,14 @@ const WorkHistory = () => {
                                         Projects
                                     </Typography>
                                     <Typography sx={{ mt: 1 }}>
-                                        During my time with the WCP Team, my biggest project was the modernization of 100+ pages for the Citizens Bank  & Citizens One loan origination 
-                                        websites. For this project, I was responsible for building each new web page and overseeing the entire production deployment.
+                                        During my time with the WCP Team, the largest project I completed was the modernization of 100+ pages for the Citizens Bank & Citizens 
+                                        One loan origination websites. This included building each new web page from scratch in our CMS as well as overseeing the entire 
+                                        production deployment.
                                     </Typography>
                                     <Typography><br /></Typography>
                                     <Typography>
-                                        While on the Anovaa team, I designed and implemented a new process to reduce development time of client agnostic UI layout changes by 66%. Since the
+                                        While on the Anovaa Platform team, I took on a new project with the goal of reducing time & effort required to make UI updates to the 
+                                        platform. I designed and implemented a new process to reduce development time of client agnostic UI layout changes by 66%. Since the
                                         platform was brand new, I also spent a lot of time writing new procedures & documentation for the new application.
                                     </Typography>
                                     <Typography><br /></Typography>
@@ -454,7 +466,9 @@ const WorkHistory = () => {
                                     </Typography>
                                     <Typography><br /></Typography>
                                     <Typography>
-                                        During my time at Millersville I also worked part-time at the Sugar Bowl, a local family owned restaurant on campus, while maintaining a full course load.
+                                        During my time at Millersville I also worked part-time at the Sugar Bowl, a local family owned restaurant on campus. 
+                                        While at Sugar Bowl, my role varied day to day and included working the counter, cooking food, and delivering to the 
+                                        local area. I worked approximately 25 hours/week while maintaining a full course load.
                                     </Typography>
                                     <Typography><br /></Typography>
                                 </Box>
