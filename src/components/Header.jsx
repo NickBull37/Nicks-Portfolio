@@ -1,26 +1,7 @@
 import React, { useState } from 'react';
-import { styled } from '@mui/material/styles';
 import { Box, Stack, Typography, AppBar, Toolbar, IconButton, Menu, Container, Button, MenuItem } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import DiamondIcon from '@mui/icons-material/Diamond';
 import { nblogo } from '../utils/constants';
-
-const RedGradButton = styled(Button)(() => ({
-    color: '#fff',
-    background: 'linear-gradient(to right, #DE04AE, #EE0425)',
-    boxShadow: '0px 2px 10px 1px #1a1a1a',
-    backgroundColor: '#7e22ce',
-    '&:hover': {
-        boxShadow: '0px 2px 20px 5px #1a1a1a',
-    },
-}));
-
-const NavBtn = styled(Button)(() => ({
-    display: 'block',
-    color: '#fff',
-    my: 2,
-    mx: 1,
-}));
 
 const Header = () => {
 
@@ -46,10 +27,10 @@ const Header = () => {
                         {/*---------------------------------- DESKTOP VIEW ----------------------------------*/}
                         <Box
                             className="grad-border"
-                            display="flex"
                             alignItems="center"
                             gap={1}
                             sx={{
+                                display: { xs: 'none', md: 'flex' },
                                 px: 1
                             }}
                         >
@@ -127,34 +108,31 @@ const Header = () => {
                             </Button>
                         </Box>
                         {/*---------------------------------- MOBILE VIEW ----------------------------------*/}
-                        {/* <DiamondIcon
-                            className="color-acc"
+                        <Box
+                            className="grad-border"
+                            alignItems="center"
+                            gap={1}
                             sx={{
                                 display: { xs: 'flex', md: 'none' },
-                                ml: 1
-                            }}
-                        /> */}
-                        <Typography
-                            flexGrow={1}
-                            ml={1}
-                            variant="h5"
-                            noWrap
-                            component="a"
-                            href="#app-bar-with-responsive-menu"
-                            sx={{
-                                display: { xs: 'flex', md: 'none' },
-                                fontFamily: 'monospace',
-                                fontWeight: 700,
-                                letterSpacing: '.1rem',
-                                color: 'inherit',
-                                textDecoration: 'none',
+                                mt: 1,
+                                px: 1
                             }}
                         >
-                            <span className='color-purple'>[&nbsp;</span>NICK<span className="color-purple">'</span>S PORTFOLIO<span className='color-purple'>&nbsp;]</span>
-                        </Typography>
+                            <img src={nblogo} height={22}/>
+                            <Typography
+                                className="progress-h3"
+                                sx={{
+                                    pb: '2px'
+                                }}
+                            >
+                                Portfolio
+                            </Typography>
+                        </Box>
                         <Box
+                            justifyContent="flex-end"
                             sx={{
-                                display: { xs: 'flex', md: 'none' }
+                                display: { xs: 'flex', md: 'none' },
+                                flexGrow: 1
                             }}
                         >
                             <IconButton

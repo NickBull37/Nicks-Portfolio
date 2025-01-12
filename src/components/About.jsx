@@ -58,7 +58,9 @@ const About = () => {
         >
             <Box className="container">
                 <Box className="row">
-                    <Box className="about-col-1">
+                    <Box className="about-col-1"
+                        
+                    >
                         <img src={aboutImage} alt="Nick" />
                     </Box>
                     <Box className="about-col-2">

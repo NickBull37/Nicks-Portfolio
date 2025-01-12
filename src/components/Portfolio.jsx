@@ -23,8 +23,8 @@ const Portfolio = () => {
                         <Box className="layer">
                             <Typography
                                 sx={{
-                                    fontSize: { xs: '1.5rem', md: '1.75rem' },
-                                    mb: { xs: '15px', md: '25px' }
+                                    fontSize: '1.5rem',
+                                    mb: '15px'
                                 }}
                             >
                                 Van Horn Contractors
@@ -32,7 +32,7 @@ const Portfolio = () => {
                             <Typography
                                 textAlign="left"
                                 sx={{
-                                    mb: { xs: '0', md: '20px' }
+                                    mb: { xs: '0', md: '12px' }
                                 }}
                             >
                                     This is a website built to promote a local, family owned & operated contracting business Check it out at the link below!
@@ -41,7 +41,7 @@ const Portfolio = () => {
                                 display={'flex'}
                                 width={"100%"}
                                 justifyContent="space-between"
-                                my={2}
+                                my={1}
                             >
                                 <Tooltip title="React">
                                     <img className="svg-img" src="/svgs/React.svg"></img>
@@ -73,8 +73,8 @@ const Portfolio = () => {
                         <Box className="layer">
                             <Typography
                                 sx={{
-                                    fontSize: { xs: '1.5rem', md: '1.75rem' },
-                                    mb: { xs: '15px', md: '25px' }
+                                    fontSize: '1.5rem',
+                                    mb: '15px'
                                 }}
                             >
                                 SunShot AI
@@ -82,16 +82,16 @@ const Portfolio = () => {
                             <Typography
                                 textAlign="left"
                                 sx={{
-                                    mb: { xs: '0', md: '20px' }
+                                    mb: { xs: '0', md: '12px' }
                                 }}
                             >
-                                    This is a AI generation SaaS platform that supports text, code, image, music, and video generation. Try it out for free! Every new user gets 5 free generations.
+                                    This is a AI generation SaaS platform that supports text, code, image, music, and video generation. Try it out for free with 5 free generations!
                             </Typography>
                             <Box
                                 display={'flex'}
                                 width={"100%"}
                                 justifyContent="space-between"
-                                my={2}
+                                my={1}
                             >
                                 <Tooltip title="TypeScript">
                                     <img className="svg-img" src="/svgs/typescript.svg"></img>
@@ -134,8 +134,8 @@ const Portfolio = () => {
                             >
                                 <Typography
                                     sx={{
-                                        fontSize: { xs: '1.5rem', md: '1.75rem' },
-                                        mb: { xs: '15px', md: '25px' }
+                                        fontSize: '1.5rem',
+                                        mb: '15px'
                                     }}
                                 >
                                     FamFiction
@@ -151,16 +151,16 @@ const Portfolio = () => {
                             <Typography
                                 textAlign="left"
                                 sx={{
-                                    mb: { xs: '0', md: '20px' }
+                                    mb: { xs: '0', md: '12px' }
                                 }}
                             >
-                                A collaborative story builder and reading environment. Contribute to ongoing stories by writing or designing story art. Checkout the source code using the github link below.
+                                A collaborative story builder and reading environment. Contribute to stories by writing or designing story art. Checkout the code using the github link below.
                             </Typography>
                             <Box
                                 display={'flex'}
                                 width={"100%"}
                                 justifyContent="space-between"
-                                my={2}
+                                my={1}
                             >
                                 <Tooltip title="C#">
                                     <img className="svg-img" src="/svgs/csharp.svg"></img>

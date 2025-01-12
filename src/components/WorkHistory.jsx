@@ -35,9 +35,9 @@ const WorkHistory = () => {
                                 <Card>
                                     <CardMedia
                                         component="img"
-                                        height='25'
+                                        height='25px'
                                         image={webstaurantLogo}
-                                        alt=""
+                                        alt="WebstaurantStore Logo"
                                     />
                                 </Card>
                                 <Typography
@@ -57,14 +57,6 @@ const WorkHistory = () => {
                                 >
                                     Software Developer
                                 </Typography>
-                                {/* <Chip
-                                    className="color-bg-acc"
-                                    label="current"
-                                    size='small'
-                                    sx={{
-                                        ml: 4
-                                    }}
-                                /> */}
                             </AccordionSummary>
                             <AccordionDetails
                                 className="border-acc-top"
@@ -153,9 +145,9 @@ const WorkHistory = () => {
                                 <Card>
                                     <CardMedia
                                         component="img"
-                                        height='25'
+                                        height='25px'
                                         image={clarityLogo}
-                                        alt=""
+                                        alt="Clarity Ventures Logo"
                                     />
                                 </Card>
                                 <Typography
@@ -282,9 +274,9 @@ const WorkHistory = () => {
                                 <Card>
                                     <CardMedia
                                         component="img"
-                                        height='25'
+                                        height='25px'
                                         image={anovaaLogo}
-                                        alt=""
+                                        alt="Anovaa Logo"
                                     />
                                 </Card>
                                 <Typography
@@ -401,9 +393,9 @@ const WorkHistory = () => {
                                 <Card>
                                     <CardMedia
                                         component="img"
-                                        height='25'
+                                        height='25px'
                                         image={millersvilleLogo}
-                                        alt=""
+                                        alt="Millersville University Logo"
                                     />
                                 </Card>
                                 <Typography
