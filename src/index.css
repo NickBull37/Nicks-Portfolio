@@ -120,6 +120,13 @@ a {
     letter-spacing: 0.3rem !important;
 }
 
+.progress-h3 {
+    font-family: Progress !important;
+    font-weight: 300;
+    font-size: 1.5rem!important;
+    letter-spacing: .2rem !important;
+}
+
 /* Brave */
 .brave-h2 {
     font-family: Brave !important;
@@ -205,9 +212,31 @@ nav .fa-solid {
 }
 
 .hover-fade:hover {
-    background-color: rgba(255, 51, 255, 0.8)!important;
+    background: linear-gradient(to right, #2F0897, #A602B0)!important;
 }
 
+.grad-border {
+    border-width: 1px!important;
+    border-style: solid!important;
+    border-image: linear-gradient(to right, #EE0425, #2F0897) 1;
+}
+.grad-text {
+    background: linear-gradient(to right, #EE0425, #2F0897)!important;
+    -webkit-background-clip: text!important;
+    -webkit-text-fill-color: transparent!important;
+}
+
+.red-grad-text {
+    background: linear-gradient(to right, #EE0425, #DE04AE)!important;
+    -webkit-background-clip: text!important;
+    -webkit-text-fill-color: transparent!important;
+}
+
+.red-grad-icon {
+    background: linear-gradient(to right, #DE04AE, #EE0425);
+    -webkit-background-clip: text!important;
+    -webkit-text-fill-color: transparent!important;
+}
 
 
 /********************************************************************************************************************************************
@@ -394,8 +423,8 @@ nav .fa-solid {
     font-size: 1.125rem;
     line-height: 60px;
     background: #fff;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     text-align: center;
 }
@@ -422,6 +451,11 @@ nav .fa-solid {
 
 .btn:hover {
     background: var(--purple);
+}
+
+.proj-link {
+    max-height: 25px;
+    max-width: 25px;
 }
 
 
@@ -456,7 +490,10 @@ nav .fa-solid {
 }
 
 .social-icons a:hover {
-    color: var(--purple);
+    background: linear-gradient(to right, #DE04AE, #EE0425);
+    box-shadow: '0px 2px 10px 1px #1a1a1a';
+    -webkit-background-clip: text!important;
+    -webkit-text-fill-color: transparent!important;
     transform: translateY(-5px);
 }
 

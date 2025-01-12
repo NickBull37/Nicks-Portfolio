@@ -1,7 +1,26 @@
 import React, { useState } from 'react';
+import { styled } from '@mui/material/styles';
 import { Box, Stack, Typography, AppBar, Toolbar, IconButton, Menu, Container, Button, MenuItem } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import DiamondIcon from '@mui/icons-material/Diamond';
+import { nblogo } from '../utils/constants';
+
+const RedGradButton = styled(Button)(() => ({
+    color: '#fff',
+    background: 'linear-gradient(to right, #DE04AE, #EE0425)',
+    boxShadow: '0px 2px 10px 1px #1a1a1a',
+    backgroundColor: '#7e22ce',
+    '&:hover': {
+        boxShadow: '0px 2px 20px 5px #1a1a1a',
+    },
+}));
+
+const NavBtn = styled(Button)(() => ({
+    display: 'block',
+    color: '#fff',
+    my: 2,
+    mx: 1,
+}));
 
 const Header = () => {
 
@@ -25,20 +44,25 @@ const Header = () => {
                 <Container maxWidth="xl">
                     <Toolbar disableGutters>
                         {/*---------------------------------- DESKTOP VIEW ----------------------------------*/}
-                        <Typography
-                            className="progress"
+                        <Box
+                            className="grad-border"
+                            display="flex"
+                            alignItems="center"
+                            gap={1}
                             sx={{
-                                mt: 2,
-                                display: { xs: 'none', md: 'flex' },
-                                // Styles for border
-                                py: '5px',
-                                px: '20px',
-                                border: '1px solid #ff00ff',
-                                borderRadius: '10px'
+                                px: 1
                             }}
                         >
-                            Nick<span className="color-purple">'</span>s Portfolio
-                        </Typography>
+                            <img src={nblogo} height={22}/>
+                            <Typography
+                                className="progress-h3"
+                                sx={{
+                                    pb: '2px'
+                                }}
+                            >
+                                Portfolio
+                            </Typography>
+                        </Box>
                         <Box
                             justifyContent={'flex-end'}
                             sx={{
@@ -52,7 +76,12 @@ const Header = () => {
                                 key='About'
                                 href='#about'
                                 onClick={handleCloseNavMenu}
-                                sx={{ my: 2, mx: 1, color: 'white', display: 'block' }}
+                                sx={{
+                                    my: 2,
+                                    mx: 1,
+                                    color: 'white',
+                                    display: 'block',
+                                }}
                             >
                                 About
                             </Button>
@@ -192,7 +221,8 @@ const Header = () => {
                                 
                             }}
                         >
-                            Hi, my name is<br /><span className="color-purple brave-h2">Nick Bulisky</span>
+                            Hi, my name is<br />
+                            <span className="grad-text brave-h2">Nick Bulisky</span>
                         </Typography>
                         <Typography
                             display={{ xs: 'none', md: 'block' }}

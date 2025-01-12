@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Typography, Tooltip } from '@mui/material';
 import { sunshot, famfiction, vanhornContractors, comingsoon } from '../utils/constants';
 import { upRightSquareIcon } from '../utils/constants';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
 const Portfolio = () => {
     return (
@@ -58,7 +59,13 @@ const Portfolio = () => {
                                     <img className="svg-img" src="/svgs/materialui.svg"></img>
                                 </Tooltip>
                             </Box>
-                            <a href="https://vanhorncontractors.com/" target="_blank" rel="noreferrer">{upRightSquareIcon}</a>
+                            
+                            <a
+                                href="https://vanhorncontractors.com/"
+                                target="_blank"
+                                rel="noreferrer">
+                                    <OpenInNewIcon />
+                            </a>
                         </Box>
                     </Box>
                     <Box className="work">
@@ -108,29 +115,13 @@ const Portfolio = () => {
                                     <img className="svg-img" src="/svgs/css3.svg"></img>
                                 </Tooltip>
                             </Box>
-                            {/* Below box is for CSharpAnalyzer when its finished */}
-                            {/* <Box
-                                display={'flex'}
-                                gap={4}
-                                my={2}
-                            >
-                                <Tooltip title="C#">
-                                    <img className="svg-img" src="/svgs/csharp.svg"></img>
-                                </Tooltip>
-                                <Tooltip title="D3">
-                                    <img className="svg-img-d3" src="/svgs/d3.svg"></img>
-                                </Tooltip>
-                                <Tooltip title="Javascript">
-                                    <img className="svg-img" src="/svgs/javascript.svg"></img>
-                                </Tooltip>
-                                <Tooltip title="HTML5">
-                                    <img className="svg-img" src="/svgs/html5.svg"></img>
-                                </Tooltip>
-                                <Tooltip title="CSS3">
-                                    <img className="svg-img" src="/svgs/css3.svg"></img>
-                                </Tooltip>
-                            </Box> */}
-                            <a href="https://sunshotai.com/" target="_blank" rel="noreferrer">{upRightSquareIcon}</a>
+                            
+                            <a
+                                href="https://sunshotai.com/"
+                                target="_blank"
+                                rel="noreferrer">
+                                    <OpenInNewIcon />
+                            </a>
                         </Box>
                     </Box>
                     <Box className="work">
@@ -193,7 +184,12 @@ const Portfolio = () => {
                                     <img className="svg-img" src="/svgs/sqlite.svg"></img>
                                 </Tooltip>
                             </Box>
-                            <a href="https://github.com/NickBull37/Fam-Fiction" target="_blank" rel="noreferrer">{upRightSquareIcon}</a>
+                            <a
+                                href="https://github.com/NickBull37/Fam-Fiction"
+                                target="_blank"
+                                rel="noreferrer">
+                                    <OpenInNewIcon />
+                            </a>
                         </Box>
                     </Box>
                     {/* <Box className="work">

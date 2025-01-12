@@ -14,9 +14,13 @@ const theme = createTheme({
     },
 });
 
-const PurpleButton = styled(Button)(() => ({
+const RedGradButton = styled(Button)(() => ({
+    color: '#fff',
+    background: 'linear-gradient(to right, #DE04AE, #EE0425)',
+    boxShadow: '0px 2px 10px 1px #1a1a1a',
+    backgroundColor: '#7e22ce',
     '&:hover': {
-        backgroundColor: '#990099',
+        boxShadow: '0px 2px 20px 5px #1a1a1a',
     },
 }));
 
@@ -89,14 +93,18 @@ const Contact = () => {
                                 mt: '30px'
                             }}
                         >
-                            {paperPlaneIcon}nbulisky@gmail.com
+                            <Box display="flex">
+                                <span className="red-grad-icon">{paperPlaneIcon}</span>nbulisky@gmail.com
+                            </Box>
                         </Typography>
                         <Typography
                             sx={{
                                 mt: '30px'
                             }}
                         >
-                            {phoneIcon}215-260-4875
+                            <Box display="flex">
+                                <span className="red-grad-icon">{phoneIcon}</span>215-260-4875
+                            </Box>
                         </Typography>
                         <Box className="social-icons">
                             <a href="https://github.com/NickBull37" target="_blank" rel="noreferrer">{githubIcon}</a>
@@ -106,18 +114,17 @@ const Contact = () => {
                             display={{ xs: 'flex', md: 'block' }}
                             justifyContent={'center'}
                         >
-                            <PurpleButton
+                            <RedGradButton
                                 variant='contained'
                                 href="/documents/Nicholas-Bulisky-Resume.pdf"
                                 download
                                 startIcon={<DownloadIcon />}
                                 sx={{
-                                    background: '#ff00ff',
                                     my: '50px',
                                 }}
                             >
                                 My Resume
-                            </PurpleButton>
+                            </RedGradButton>
                         </Box>
                     </Box>
                     <Box
@@ -143,18 +150,16 @@ const Contact = () => {
                                 display={{ xs: 'flex', md: 'block' }}
                                 justifyContent={'center'}
                             >
-                                <PurpleButton
+                                <RedGradButton
                                     variant='contained'
                                     size='large'
                                     type='submit'
                                     sx={{
-                                        background: '#ff00ff',
                                         mt: {xs: '30px', md: '20px' },
-                                        mb: '50px'
                                     }}
                                 >
                                     Submit
-                                </PurpleButton>
+                                </RedGradButton>
                                 <Snackbar open={snackbarOpen} autoHideDuration={6000} onClose={handleClose}>
                                     <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
                                         Message sent successfully.
