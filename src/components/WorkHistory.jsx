@@ -17,8 +17,41 @@ const WorkHistoryHeader = styled(Typography)(() => ({
 const StyledAccordion = styled(Accordion)(() => ({
     color: '#fff',
     backgroundColor: '#262626',
-    padding: '10px'
+    // padding: '10px'
     // minHeight: '50px',
+}));
+
+const StyledAccordionActions = styled(AccordionActions)(() => ({
+    padding: '0 15px 15px 15px',
+}));
+
+const CompanyName = styled(Typography)(({ theme }) => ({
+    width: '35%',
+    flexShrink: 0,
+    marginLeft: '20px',
+    lineHeight: '2',
+    fontSize: '1.063rem',
+    [theme.breakpoints.down('md')]: {
+        width: '75%', // for smaller screens
+    },
+}));
+
+const JobTitle = styled(Typography)(({ theme }) => ({
+    color: '#cccccc',
+    lineHeight: '2',
+    display: 'block',
+    [theme.breakpoints.down('md')]: {
+        display: 'none', // for smaller screens
+    },
+}));
+
+const MillersvilleButton = styled(Button)(({ theme }) => ({
+    textTransform: 'none',
+    backgroundColor: '#b38f00',
+    marginLeft: '8px',
+    '&:hover': {
+        backgroundColor: '#806600',
+    },
 }));
 
 const WorkHistory = () => {
@@ -50,33 +83,22 @@ const WorkHistory = () => {
                             <Card>
                                 <CardMedia
                                     component="img"
-                                    height='25px'
+                                    height='35px'
                                     image={webstaurantLogo}
                                     alt="WebstaurantStore Logo"
                                 />
                             </Card>
-                            <Typography
-                                sx={{
-                                    width: { xs: '75%', md: '35%' },
-                                    flexShrink: 0,
-                                    ml: 2
-                                }}
-                            >
+                            <CompanyName>
                                 WebstaurantStore.com
-                            </Typography>
-                            <Typography
-                                sx={{
-                                    color: '#cccccc',
-                                    display: { xs: 'none', md: 'block' }
-                                }}
-                            >
+                            </CompanyName>
+                            <JobTitle>
                                 Software Developer
-                            </Typography>
+                            </JobTitle>
                         </AccordionSummary>
                         <AccordionDetails
                             className="border-acc-top"
                             sx={{
-                                pt: 4
+                                pt: 2.5
                             }}
                         >
                             <Typography mb={1}>
@@ -127,9 +149,9 @@ const WorkHistory = () => {
                                 <Typography><br /></Typography> */}
                             </Box>
                         </AccordionDetails>
-                        <AccordionActions>
+                        <StyledAccordionActions>
                             <Typography variant='body2'>
-                                Check out their link here
+                                Check them out here
                             </Typography>
                             <Button
                                 href='https://www.webstaurantstore.com/'
@@ -141,9 +163,9 @@ const WorkHistory = () => {
                                     ml: 1
                                 }}
                             >
-                                Webstaurant
+                                WebstaurantStore
                             </Button>
-                        </AccordionActions>
+                        </StyledAccordionActions>
                     </StyledAccordion>
 
                     <StyledAccordion>
@@ -159,33 +181,22 @@ const WorkHistory = () => {
                             <Card>
                                 <CardMedia
                                     component="img"
-                                    height='25px'
+                                    height='35px'
                                     image={clarityLogo}
                                     alt="Clarity Ventures Logo"
                                 />
                             </Card>
-                            <Typography
-                                sx={{
-                                    width: { xs: '75%', md: '35%' },
-                                    flexShrink: 0,
-                                    ml: 2
-                                }}
-                            >
+                            <CompanyName>
                                 Clarity Ventures, Inc.
-                            </Typography>
-                            <Typography
-                                sx={{
-                                    color: '#cccccc',
-                                    display: { xs: 'none', md: 'block' }
-                                }}
-                            >
+                            </CompanyName>
+                            <JobTitle>
                                 Software Developer
-                            </Typography>
+                            </JobTitle>
                         </AccordionSummary>
                         <AccordionDetails
                             className="border-acc-top"
                             sx={{
-                                pt: 4
+                                pt: 2.5
                             }}
                         >
                             <Typography mb={1}>
@@ -255,9 +266,9 @@ const WorkHistory = () => {
                                 <Typography><br /></Typography>
                             </Box>
                         </AccordionDetails>
-                        <AccordionActions>
+                        <StyledAccordionActions>
                             <Typography variant='body2'>
-                                Check out their link here
+                                Check them out here
                             </Typography>
                             <Button
                                 href='https://www.clarity-ventures.com/'
@@ -271,7 +282,7 @@ const WorkHistory = () => {
                             >
                                 Clarity Ventures
                             </Button>
-                        </AccordionActions>
+                        </StyledAccordionActions>
                     </StyledAccordion>
 
                     <StyledAccordion>
@@ -287,33 +298,22 @@ const WorkHistory = () => {
                             <Card>
                                 <CardMedia
                                     component="img"
-                                    height='25px'
+                                    height='35px'
                                     image={anovaaLogo}
                                     alt="Anovaa Logo"
                                 />
                             </Card>
-                            <Typography
-                                sx={{
-                                    width: { xs: '75%', md: '35%' },
-                                    flexShrink: 0,
-                                    ml: 2
-                                }}
-                            >
+                            <CompanyName>
                                 Anovaa
-                            </Typography>
-                            <Typography
-                                sx={{
-                                    color: '#cccccc',
-                                    display: { xs: 'none', md: 'block' }
-                                }}
-                            >
+                            </CompanyName>
+                            <JobTitle>
                                 Jr. Software Developer
-                            </Typography>
+                            </JobTitle>
                         </AccordionSummary>
                         <AccordionDetails
                             className="border-acc-top"
                             sx={{
-                                pt: 4
+                                pt: 2.5
                             }}
                         >
                             <Typography mb={1}>
@@ -373,9 +373,9 @@ const WorkHistory = () => {
                                 <Typography><br /></Typography>
                             </Box>
                         </AccordionDetails>
-                        <AccordionActions>
+                        <StyledAccordionActions>
                             <Typography variant='body2'>
-                                Check out their link here
+                                Check them out here
                             </Typography>
                             <Button
                                 href='https://www.anovaa.com/'
@@ -389,7 +389,7 @@ const WorkHistory = () => {
                             >
                                 Anovaa
                             </Button>
-                        </AccordionActions>
+                        </StyledAccordionActions>
                     </StyledAccordion>
 
                     <StyledAccordion>
@@ -405,33 +405,22 @@ const WorkHistory = () => {
                             <Card>
                                 <CardMedia
                                     component="img"
-                                    height='25px'
+                                    height='35px'
                                     image={millersvilleLogo}
                                     alt="Millersville University Logo"
                                 />
                             </Card>
-                            <Typography
-                                sx={{
-                                    width: { xs: '75%', md: '35%' },
-                                    flexShrink: 0,
-                                    ml: 2
-                                }}
-                            >
+                            <CompanyName>
                                 Millersville University
-                            </Typography>
-                            <Typography
-                                sx={{
-                                    color: '#cccccc',
-                                    display: { xs: 'none', md: 'block' }
-                                }}
-                            >
+                            </CompanyName>
+                            <JobTitle>
                                 Undergrad Student
-                            </Typography>
+                            </JobTitle>
                         </AccordionSummary>
                         <AccordionDetails
                             className="border-acc-top"
                             sx={{
-                                pt: 4
+                                pt: 2.5
                             }}
                         >
                             <Typography mb={1}>
@@ -477,24 +466,23 @@ const WorkHistory = () => {
                                 <Typography><br /></Typography>
                             </Box>
                         </AccordionDetails>
-                        <AccordionActions>
+                        <StyledAccordionActions>
                             <Typography variant='body2'>
-                                Check out their link here
+                                Check them out here
                             </Typography>
-                            <Button
+                            <MillersvilleButton
                                 href='https://www.millersville.edu/'
                                 target='_blank'
                                 variant="contained"
-                                color='warning'
-                                sx={{
-                                    textTransform: 'none',
-                                    backgroundColor: '#b3b300',
-                                    ml: 1
-                                }}
+                                // sx={{
+                                //     textTransform: 'none',
+                                //     backgroundColor: '#b3b300',
+                                //     ml: 1
+                                // }}
                             >
                                 Millersville
-                            </Button>
-                        </AccordionActions>
+                            </MillersvilleButton>
+                        </StyledAccordionActions>
                     </StyledAccordion>
 
                 </Box>
