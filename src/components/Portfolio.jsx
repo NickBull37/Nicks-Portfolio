@@ -4,10 +4,7 @@ import { Box, Typography, Tooltip } from '@mui/material';
 import { sunshot, famfiction, vanhornContractors, comingsoon } from '../utils/constants';
 import { upRightSquareIcon } from '../utils/constants';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
-
-const PortfolioContainer = styled(Box)(() => ({
-    border: '1px solid red',
-}));
+import SectionContainer from '../styled/SectionContainer';
 
 const PortfolioHeader = styled(Typography)(() => ({
     fontSize: '3.75rem',
@@ -17,7 +14,7 @@ const PortfolioHeader = styled(Typography)(() => ({
 
 const Portfolio = () => {
     return (
-        <PortfolioContainer
+        <SectionContainer
             id="portfolio"
         >
             <PortfolioHeader>
@@ -212,7 +209,7 @@ const Portfolio = () => {
                     </Box>
                 </Box> */}
             </Box>
-        </PortfolioContainer>
+        </SectionContainer>
     );
 }
 

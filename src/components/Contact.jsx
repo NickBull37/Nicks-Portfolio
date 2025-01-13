@@ -5,6 +5,7 @@ import { Box, Button, Snackbar, LinearProgress, Typography, Fade, CardMedia } fr
 import MuiAlert from '@mui/material/Alert';
 import DownloadIcon from '@mui/icons-material/Download';
 import { paperPlaneIcon, phoneIcon, githubIcon, linkedInIcon, cat } from '../utils/constants';
+import SectionContainer from '../styled/SectionContainer';
 
 const theme = createTheme({
     palette: {
@@ -13,10 +14,6 @@ const theme = createTheme({
           },
     },
 });
-
-const ContactContainer = styled(Box)(() => ({
-    border: '1px solid red',
-}));
 
 const ContactHeader = styled(Typography)(() => ({
     fontSize: '3.75rem',
@@ -80,7 +77,7 @@ const Contact = () => {
     };
 
     return (
-        <ContactContainer
+        <SectionContainer
             id="contact"
         >
             <Box className="row">
@@ -198,7 +195,7 @@ const Contact = () => {
                 />
             </Box>
             
-        </ContactContainer>
+        </SectionContainer>
     );
 }
 

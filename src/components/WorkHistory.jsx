@@ -6,10 +6,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import { webstaurantLogo, clarityLogo, anovaaLogo, millersvilleLogo } from '../utils/constants';
-
-const WorkHistoryContainer = styled(Box)(() => ({
-    border: '1px solid red',
-}));
+import SectionContainer from '../styled/SectionContainer';
 
 const WorkHistoryHeader = styled(Typography)(() => ({
     fontSize: '3.75rem',
@@ -17,9 +14,16 @@ const WorkHistoryHeader = styled(Typography)(() => ({
     color: '#fff'
 }));
 
+const StyledAccordion = styled(Accordion)(() => ({
+    color: '#fff',
+    backgroundColor: '#262626',
+    padding: '10px'
+    // minHeight: '50px',
+}));
+
 const WorkHistory = () => {
     return (
-        <WorkHistoryContainer
+        <SectionContainer
             id="work-history"
         >
             <WorkHistoryHeader>
@@ -32,15 +36,14 @@ const WorkHistory = () => {
                 mt={'20px'}
             >
                 <Box>
-                    <Accordion
-                        sx={{
-                            color: '#fff',
-                            backgroundColor: '#262626',
-                            minHeight: '50px'
-                        }}
-                    >
+
+                    <StyledAccordion>
                         <AccordionSummary
-                            expandIcon={<ExpandMoreIcon sx={{ color: '#fff' }} />}
+                            expandIcon={
+                                <ExpandMoreIcon
+                                    sx={{ color: '#fff' }}
+                                />
+                            }
                             aria-controls="panel1-content"
                             id="panel1-header"
                         >
@@ -141,16 +144,15 @@ const WorkHistory = () => {
                                 Webstaurant
                             </Button>
                         </AccordionActions>
-                    </Accordion>
-                    <Accordion
-                        sx={{
-                            color: '#fff',
-                            backgroundColor: '#262626',
-                            minHeight: '50px'
-                        }}
-                    >
+                    </StyledAccordion>
+
+                    <StyledAccordion>
                         <AccordionSummary
-                            expandIcon={<ExpandMoreIcon sx={{ color: '#fff' }} />}
+                            expandIcon={
+                                <ExpandMoreIcon
+                                    sx={{ color: '#fff' }}
+                                />
+                            }
                             aria-controls="panel2-content"
                             id="panel2-header"
                         >
@@ -270,16 +272,15 @@ const WorkHistory = () => {
                                 Clarity Ventures
                             </Button>
                         </AccordionActions>
-                    </Accordion>
-                    <Accordion
-                        sx={{
-                            color: '#fff',
-                            backgroundColor: '#262626',
-                            minHeight: '50px'
-                        }}
-                    >
+                    </StyledAccordion>
+
+                    <StyledAccordion>
                         <AccordionSummary
-                            expandIcon={<ExpandMoreIcon sx={{ color: '#fff' }} />}
+                            expandIcon={
+                                <ExpandMoreIcon
+                                    sx={{ color: '#fff' }}
+                                />
+                            }
                             aria-controls="panel3-content"
                             id="panel3-header"
                         >
@@ -389,16 +390,15 @@ const WorkHistory = () => {
                                 Anovaa
                             </Button>
                         </AccordionActions>
-                    </Accordion>
-                    <Accordion
-                        sx={{
-                            color: '#fff',
-                            backgroundColor: '#262626',
-                            minHeight: '50px'
-                        }}
-                    >
+                    </StyledAccordion>
+
+                    <StyledAccordion>
                         <AccordionSummary
-                            expandIcon={<ExpandMoreIcon sx={{ color: '#fff' }} />}
+                            expandIcon={
+                                <ExpandMoreIcon
+                                    sx={{ color: '#fff' }}
+                                />
+                            }
                             aria-controls="panel3-content"
                             id="panel3-header"
                         >
@@ -495,10 +495,11 @@ const WorkHistory = () => {
                                 Millersville
                             </Button>
                         </AccordionActions>
-                    </Accordion>
+                    </StyledAccordion>
+
                 </Box>
             </Box>
-        </WorkHistoryContainer>
+        </SectionContainer>
     );
 }
 

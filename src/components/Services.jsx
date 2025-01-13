@@ -2,10 +2,7 @@ import React from 'react';
 import { styled } from '@mui/material/styles';
 import { Box, Typography } from '@mui/material';
 import { codeIcon, cropIcon, laptopCodeIcon } from '../utils/constants';
-
-const ServicesContainer = styled(Box)(() => ({
-    border: '1px solid red',
-}));
+import SectionContainer from '../styled/SectionContainer';
 
 const ServicesHeader = styled(Typography)(() => ({
     fontSize: '3.75rem',
@@ -15,7 +12,7 @@ const ServicesHeader = styled(Typography)(() => ({
 
 const Services = () => {
     return (
-        <ServicesContainer
+        <SectionContainer
             id="services"
         >
             <ServicesHeader>
@@ -76,7 +73,7 @@ const Services = () => {
                     </Typography>
                 </Box>
             </Box>
-        </ServicesContainer>
+        </SectionContainer>
     );
 }
 

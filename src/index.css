@@ -208,11 +208,12 @@ nav .fa-solid {
 }
 
 .hover-fade {
-    transition: 0.3s!important;
+    border-bottom: 2px solid transparent;
 }
 
 .hover-fade:hover {
-    background: linear-gradient(to right, #2F0897, #A602B0)!important;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(to right, #EE0425, #A602B0, #2F0897) 1;
 }
 
 .grad-border {
@@ -364,7 +365,8 @@ nav .fa-solid {
 }
 
 .border-acc-top {
-    border-top: 1px solid #000;
+    margin-top: 8px;
+    border-top: 1px solid #808080;
 }
 
 

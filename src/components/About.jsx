@@ -4,6 +4,7 @@ import { aboutImage } from '../utils/constants';
 import { Box, Typography, Tabs, Tab } from '@mui/material';
 import PropTypes from 'prop-types';
 import OpenInNewRoundedIcon from '@mui/icons-material/OpenInNewRounded';
+import SectionContainer from '../styled/SectionContainer';
 
 function CustomTabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -36,10 +37,6 @@ function a11yProps(index) {
         'aria-controls': `simple-tabpanel-${index}`,
     };
 }
-
-const AboutMeContainer = styled(Box)(() => ({
-    border: '1px solid red',
-}));
 
 const AboutMeHeader = styled(Typography)(() => ({
     fontSize: '3.75rem',
@@ -81,8 +78,8 @@ const About = () => {
     };
 
     return (
-        <AboutMeContainer
-            id="about"
+        <SectionContainer
+            id="about-me"
         >
             <Box className="row">
 
@@ -234,7 +231,7 @@ const About = () => {
                     </Box>
                 </Box>
             </Box>
-        </AboutMeContainer>
+        </SectionContainer>
     );
 }
 

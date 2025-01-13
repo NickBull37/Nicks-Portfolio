@@ -7,7 +7,7 @@ const Footer = () => {
             className="copyright"
         >
             <Typography>
-                Copyright <span className="color-purple">©</span> Nick.
+                Copyright <span className="red-grad-text">©</span> Nick.
             </Typography>
         </Box>
     );
