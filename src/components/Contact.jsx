@@ -14,6 +14,17 @@ const theme = createTheme({
     },
 });
 
+const ContactContainer = styled(Box)(() => ({
+    border: '1px solid red',
+}));
+
+const ContactHeader = styled(Typography)(() => ({
+    fontSize: '3.75rem',
+    fontWeight: '600',
+    color: '#fff',
+    lineHeight: '1.3'
+}));
+
 const RedGradButton = styled(Button)(() => ({
     color: '#fff',
     background: 'linear-gradient(to right, #DE04AE, #EE0425)',
@@ -69,107 +80,107 @@ const Contact = () => {
     };
 
     return (
-        <Box id="contact" sx={{mt: '50px'}}>
-            <Box className="container">
-                <Box className="row">
-                    <Box
-                        className="contact-left"
-                        display={{ xs: 'flex', md: 'block' }}
-                        flexDirection={{ xs: 'column', md: 'inherit' }}
-                        justifyContent={{ xs: 'flex-start', md: 'inherit' }}
+        <ContactContainer
+            id="contact"
+        >
+            <Box className="row">
+                <Box
+                    className="contact-left"
+                    display={{ xs: 'flex', md: 'block' }}
+                    flexDirection={{ xs: 'column', md: 'inherit' }}
+                    justifyContent={{ xs: 'flex-start', md: 'inherit' }}
+                >
+                    <ContactHeader>
+                        Contact Me
+                    </ContactHeader>
+
+                    <Typography
+                        sx={{
+                            mt: '30px'
+                        }}
                     >
-                        <Typography
-                            sx={{
-                                fontSize: '3.75rem',
-                                fontWeight: '600',
-                                color: '#fff',
-                                lineHeight: '1.3'
-                            }}
-                        >
-                            Contact Me
-                        </Typography>
-                        <Typography
-                            sx={{
-                                mt: '30px'
-                            }}
-                        >
-                            <Box display="flex">
-                                <span className="red-grad-icon">{paperPlaneIcon}</span>nbulisky@gmail.com
-                            </Box>
-                        </Typography>
-                        <Typography
-                            sx={{
-                                mt: '30px'
-                            }}
-                        >
-                            <Box display="flex">
-                                <span className="red-grad-icon">{phoneIcon}</span>215-260-4875
-                            </Box>
-                        </Typography>
-                        <Box className="social-icons">
-                            <a href="https://github.com/NickBull37" target="_blank" rel="noreferrer">{githubIcon}</a>
-                            <a href="https://www.linkedin.com/in/nicholas-bulisky-959975161/" target="_blank" rel="noreferrer">{linkedInIcon}</a>
+                        <Box display="flex">
+                            <span className="red-grad-icon">{paperPlaneIcon}</span>nbulisky@gmail.com
                         </Box>
+                    </Typography>
+
+                    <Typography
+                        sx={{
+                            mt: '30px'
+                        }}
+                    >
+                        <Box display="flex">
+                            <span className="red-grad-icon">{phoneIcon}</span>215-260-4875
+                        </Box>
+                    </Typography>
+
+                    <Box className="social-icons">
+                        <a href="https://github.com/NickBull37" target="_blank" rel="noreferrer">{githubIcon}</a>
+                        <a href="https://www.linkedin.com/in/nicholas-bulisky-959975161/" target="_blank" rel="noreferrer">{linkedInIcon}</a>
+                    </Box>
+
+                    <Box
+                        display={{ xs: 'flex', md: 'block' }}
+                        justifyContent={'center'}
+                    >
+                        <RedGradButton
+                            variant='contained'
+                            href="/documents/Nicholas-Bulisky-Resume.pdf"
+                            download
+                            startIcon={<DownloadIcon />}
+                            sx={{
+                                my: '50px',
+                            }}
+                        >
+                            My Resume
+                        </RedGradButton>
+                    </Box>
+
+                </Box>
+
+                <Box
+                    className="contact-right"
+                    display={{ xs: 'flex', md: 'block' }}
+                    flexDirection={{ xs: 'column', md: 'inherit' }}
+                    justifyContent={{ xs: 'flex-start', md: 'inherit' }}
+                >
+
+                    <form onSubmit={handleSubmit} name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required />
+                        <input type="email" name="Email" placeholder="Your Email" required />
+                        <textarea name="Message" rows="6" placeholder="Your Message" />
+                        <ThemeProvider theme={theme}>
+                            <Fade
+                                in={loadingBar}
+                                unmountOnExit
+                            >
+                                <LinearProgress />
+                            </Fade>
+                        </ThemeProvider>
                         <Box
                             display={{ xs: 'flex', md: 'block' }}
                             justifyContent={'center'}
                         >
                             <RedGradButton
                                 variant='contained'
-                                href="/documents/Nicholas-Bulisky-Resume.pdf"
-                                download
-                                startIcon={<DownloadIcon />}
+                                size='large'
+                                type='submit'
                                 sx={{
-                                    my: '50px',
+                                    mt: {xs: '30px', md: '20px' },
                                 }}
                             >
-                                My Resume
+                                Submit
                             </RedGradButton>
+                            <Snackbar open={snackbarOpen} autoHideDuration={6000} onClose={handleClose}>
+                                <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
+                                    Message sent successfully.
+                                </Alert>
+                            </Snackbar>
                         </Box>
-                    </Box>
-                    <Box
-                        className="contact-right"
-                        display={{ xs: 'flex', md: 'block' }}
-                        flexDirection={{ xs: 'column', md: 'inherit' }}
-                        justifyContent={{ xs: 'flex-start', md: 'inherit' }}
-                    >
-
-                        <form onSubmit={handleSubmit} name="submit-to-google-sheet">
-                            <input type="text" name="Name" placeholder="Your Name" required />
-                            <input type="email" name="Email" placeholder="Your Email" required />
-                            <textarea name="Message" rows="6" placeholder="Your Message" />
-                            <ThemeProvider theme={theme}>
-                                <Fade
-                                    in={loadingBar}
-                                    unmountOnExit
-                                >
-                                    <LinearProgress />
-                                </Fade>
-                            </ThemeProvider>
-                            <Box
-                                display={{ xs: 'flex', md: 'block' }}
-                                justifyContent={'center'}
-                            >
-                                <RedGradButton
-                                    variant='contained'
-                                    size='large'
-                                    type='submit'
-                                    sx={{
-                                        mt: {xs: '30px', md: '20px' },
-                                    }}
-                                >
-                                    Submit
-                                </RedGradButton>
-                                <Snackbar open={snackbarOpen} autoHideDuration={6000} onClose={handleClose}>
-                                    <Alert onClose={handleClose} severity="success" sx={{ width: '100%' }}>
-                                        Message sent successfully.
-                                    </Alert>
-                                </Snackbar>
-                            </Box>
-                        </form>
-                    </Box>
+                    </form>
                 </Box>
             </Box>
+
             <Box
                 display="flex"
                 justifyContent="flex-end"
@@ -186,12 +197,8 @@ const Contact = () => {
                     }}
                 />
             </Box>
-            <Box
-                className="copyright"
-            >
-                <Typography>Copyright <span className="color-purple">©</span> Nick.</Typography>
-            </Box>
-        </Box>
+            
+        </ContactContainer>
     );
 }
 
