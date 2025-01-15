@@ -18,9 +18,12 @@ const NavbarContainer = styled(Box)(({ theme }) => ({
 
 const LogoContainer = styled(Box)(() => ({
     display: 'flex',
-    paddingRight: '0.5rem',
-    paddingLeft: '0.5rem',
-    paddingBottom: '0.125rem',
+    // paddingRight: '0.5rem',
+    // paddingLeft: '0.5rem',
+    // paddingBottom: '0.125rem',
+    paddingRight: '0',
+    paddingLeft: '0',
+    paddingTop: '0.5rem',
     alignItems: 'center',
     gap: 8,
 }));
@@ -50,14 +53,14 @@ const Navbar = () => {
         <NavbarContainer>
 
             <LogoContainer
-                className="grad-border"
+                // className="grad-border"
             >
-                <img src={nblogo} height={24}/>
-                <Typography
+                <img src={nblogo} height={40}/>
+                {/* <Typography
                     className="progress-h3"
                 >
                     Portfolio
-                </Typography>
+                </Typography> */}
             </LogoContainer>
             
             <NavBtnContainer>

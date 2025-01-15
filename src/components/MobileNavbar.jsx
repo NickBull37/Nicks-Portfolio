@@ -14,9 +14,7 @@ const NavbarContainer = styled(Box)(({ theme }) => ({
 
 const LogoContainer = styled(Box)(({ theme }) => ({
     display: 'flex',
-    paddingRight: '0.5rem',
-    paddingLeft: '0.5rem',
-    paddingBottom: '0.125rem',
+    paddingTop: '0.5rem',
     alignItems: 'center',
     gap: 8,
 }));
@@ -53,14 +51,14 @@ const MobileNavbar = () => {
                     <Toolbar disableGutters>
 
                         <LogoContainer
-                            className="grad-border"
+                            // className="grad-border"
                         >
-                            <img src={nblogo} height={22}/>
-                            <Typography
+                            <img src={nblogo} height={40}/>
+                            {/* <Typography
                                 className="progress-h3"
                             >
                                 Portfolio
-                            </Typography>
+                            </Typography> */}
                         </LogoContainer>
 
                         <NavMenuContainer>
