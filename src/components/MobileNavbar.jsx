@@ -17,9 +17,6 @@ const LogoContainer = styled(Box)(({ theme }) => ({
     paddingRight: '0.5rem',
     paddingLeft: '0.5rem',
     paddingBottom: '0.125rem',
-    [theme.breakpoints.down('md')]: {
-        paddingBottom: '0', // for smaller screens
-    },
     alignItems: 'center',
     gap: 8,
 }));

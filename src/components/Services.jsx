@@ -52,7 +52,7 @@ const Services = () => {
                         External Integrations
                     </Typography>
                     <Typography>
-                        I have built 3rd party integrations with public APIs for AI generation (ChatGPT & Replicate), payment processing (Paya & Authorize.net) and others.
+                        I have built 3rd party integrations with public APIs for AI generation (ChatGPT & Replicate), payment processing (Paya & Authorize.net), address validation (FedEx) and others.
                     </Typography>
                 </Box>
 
@@ -69,7 +69,7 @@ const Services = () => {
                         UI/UX Design
                     </Typography>
                     <Typography>
-                        I pride myself on designing interfaces that are elegant in appearence and intuitive for users at any level in both desktop and mobile formats.
+                        I pride myself on designing simple interfaces that are elegant in appearence and intuitive for users at any level in both desktop and mobile formats.
                     </Typography>
                 </Box>
             </Box>

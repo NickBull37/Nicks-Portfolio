@@ -52,7 +52,7 @@ const Navbar = () => {
             <LogoContainer
                 className="grad-border"
             >
-                <img src={nblogo} height={22}/>
+                <img src={nblogo} height={24}/>
                 <Typography
                     className="progress-h3"
                 >

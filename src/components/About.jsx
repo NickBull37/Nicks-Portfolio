@@ -52,6 +52,26 @@ const AboutMeText = styled(Typography)(({ theme }) => ({
     }
 }));
 
+const StyledTabs = styled(Tabs)(({ theme }) => ({
+    backgroundColor: '#1a1a1a',
+    borderTopRightRadius: '10px',
+    borderTopLeftRadius: '10px',
+    '& .MuiTabs-indicator': {
+        backgroundColor: '#fc1d3b', // Custom indicator color
+    },
+}));
+
+const StyledTab = styled(Tab)(({ theme }) => ({
+    color: '#ababab',
+    '&.Mui-selected': {
+        fontWeight: 600,
+        color: '#ababab',
+    },
+    '&:hover': {
+        background: '#0d0d0d',
+    },
+}));
+
 const TabText = styled(Typography)(({ theme }) => ({
     color: '#ababab',
     fontSize: '1.25rem',
@@ -94,9 +114,12 @@ const About = () => {
                     </AboutMeHeader>
 
                     <AboutMeText>
-                        I am a full-stack software developer with 5+ years experience working primarily on .NET applications. I am focused
-                        on developing simple, efficient, & scalable solutions that solve complex problems. Outside of work, I enjoy playing Destiny 2 or a good game of chess, hanging 
-                        out with my friends, and cheering on the Philadelphia sports teams.
+                        I am a full-stack software developer with 6+ years experience 
+                        working primarily on .NET applications. I am focused on developing 
+                        simple, efficient, & scalable solutions that solve complex problems. 
+                        Outside of work, I have my own projects I like to work on that help 
+                        me continue to grow as an engineer. I also enjoy cars, playing 
+                        chess, and watching Philadelphia sports.
                     </AboutMeText>
 
                     <Box
@@ -113,7 +136,7 @@ const About = () => {
                                 borderColor: 'divider',
                             }}
                         >
-                            <Tabs
+                            <StyledTabs
                                 value={value}
                                 variant="fullWidth"
                                 textColor="secondary"
@@ -121,10 +144,10 @@ const About = () => {
                                 onChange={handleChange}
                                 aria-label="About me tabs"
                             >
-                                <Tab label="Skills" {...a11yProps(0)} sx={{ color: '#ababab;' }} />
-                                <Tab label="Experience" {...a11yProps(1)} sx={{ color: '#ababab;' }} />
-                                <Tab label="Tools" {...a11yProps(2)} sx={{ color: '#ababab;' }} />
-                            </Tabs>
+                                <StyledTab label="Skills" {...a11yProps(0)} sx={{ borderRight: '2px solid #262626' }} />
+                                <StyledTab label="Experience" {...a11yProps(1)} sx={{ borderRight: '2px solid #262626' }} />
+                                <StyledTab label="Tools" {...a11yProps(2)} />
+                            </StyledTabs>
                         </Box>
 
                         <CustomTabPanel
@@ -163,13 +186,6 @@ const About = () => {
 
                             <TabText>
                                 Software developer at WebstaurantStore.com
-                                <a
-                                    href="https://www.webstaurantstore.com/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    <OpenInNewRoundedIcon fontSize='small' sx={{ color: "rgb(200, 90, 218)", ml: 1 }} />
-                                </a>
                             </TabText>
 
                             <Typography variant='body2' className="about-mini-header">
@@ -178,13 +194,6 @@ const About = () => {
 
                             <TabText>
                                 Software developer at Clarity Ventures, Inc.
-                                <a
-                                    href="https://www.clarity-ventures.com/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    <OpenInNewRoundedIcon fontSize='small' sx={{ color: "rgb(200, 90, 218)", ml: 1 }} />
-                                </a>
                             </TabText>
 
                             <Typography variant='body2' className="about-mini-header">
@@ -193,13 +202,6 @@ const About = () => {
 
                             <TabTextNoMargin>
                                 Junior Software developer at Anovaa
-                                <a
-                                    href="https://www.anovaa.com/"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                >
-                                    <OpenInNewRoundedIcon fontSize='small' sx={{ color: "rgb(200, 90, 218)", ml: 1 }} />
-                                </a>
                             </TabTextNoMargin>
                         </CustomTabPanel>
 

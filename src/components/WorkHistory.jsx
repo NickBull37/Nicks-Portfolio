@@ -1,6 +1,6 @@
 import React from 'react';
 import { styled } from '@mui/material/styles';
-import { Box, Typography, Button, Card, CardMedia } from '@mui/material';
+import { Box, Stack, Typography, Button, Card, CardMedia } from '@mui/material';
 import { Accordion, AccordionActions, AccordionSummary, AccordionDetails } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
@@ -19,6 +19,38 @@ const StyledAccordion = styled(Accordion)(() => ({
     backgroundColor: '#262626',
     // padding: '10px'
     // minHeight: '50px',
+}));
+
+const StyledAccordionDetails = styled(AccordionDetails)(({ theme }) => ({
+    padding: '2rem',
+    [theme.breakpoints.down('md')]: { // for smaller screens
+        padding: '1.25rem',
+    },
+}));
+
+const DatesAndLocationStack = styled(Stack)(() => ({
+    display: 'flex',
+    gap: '8px'
+}));
+
+const AccordionDetailsColumnBox = styled(Box)(({ theme }) => ({
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'row',
+    gap: 96,
+    marginTop: '32px',
+    padding: '4px',
+    [theme.breakpoints.down('md')]: { // for smaller screens
+        flexDirection: 'column',
+        gap: 40,
+    },
+}));
+
+const AccordionDetailsColumn = styled(Box)(({ theme }) => ({
+    width: '50%',
+    [theme.breakpoints.down('md')]: { // for smaller screens
+        width: '100%',
+    },
 }));
 
 const StyledAccordionActions = styled(AccordionActions)(() => ({
@@ -45,16 +77,91 @@ const JobTitle = styled(Typography)(({ theme }) => ({
     },
 }));
 
-const MillersvilleButton = styled(Button)(({ theme }) => ({
-    textTransform: 'none',
-    backgroundColor: '#b38f00',
-    marginLeft: '8px',
-    '&:hover': {
-        backgroundColor: '#806600',
-    },
+const BodyText = styled(Typography)(({ theme }) => ({
+    color: '#fff',
+    fontSize: '0.938rem',
+    letterSpacing: '0.03em',
 }));
 
 const WorkHistory = () => {
+
+    const pastEmployers = [
+        {
+            name: 'WebstaurantStore.com',
+            title: 'Software Developer',
+            logoImg: webstaurantLogo,
+            date: 'November 2023 - Current',
+            location: 'Lititz, PA',
+            myRole1: 'I have been an active member of the Mobile App team at the WebstaurantStore.com for over a year now and I have felt right at home the whole time. I was able to jump in and start contributing right away building new features specific for the mobile app and bringing over existing features from the desktop web application.',
+            myRole2: 'I\'ve really enjoyed the dynamic of our team and the environment we work in. The opportunities for advancement give me something I can strive for and the tools the company offers to help get there make me believe I am getting better every day.',
+            projects1: 'I have worked on a number new features and have been part of multiple redesigns for various areas of the mobile app. Redesigns could be to increase performance, make features more intuitive & user friendly, or to accomodate updates made by a 3rd party service.',
+            projects2: '',
+            projList: `Barcode/Image Search - uses the camera on a mobile device to search our product catalog
+                    FeatBit integration - allows our backend to deploy & toggle features with a single click instead of a code deployment
+                    FedEx Address Validation - redesign of address validation process after updates to 3rd party address validation API`,
+            btnText: 'WebstaurantStore',
+            btnColor: '#308234',
+            btnHovercolor: '#225d25',
+            btnLink: 'https://www.webstaurantstore.com/',
+        },
+        {
+            name: 'Clarity Ventures, Inc.',
+            title: 'Software Developer',
+            logoImg: clarityLogo,
+            date: 'January 2023 - June 2023',
+            location: 'Austin, TX',
+            myRole1: 'Clarity was an amazing company to work for and I really enjoyed the time I spent there, even if it was only 6 months. I made incredible strides here as a developer and met some fantastic people along the way. The company\'s enthusiasm and the level of talent among the dev teams are truly unmatched. At Clarity, I was responsible for designing and implementing new features as well as client customizations for the company\'s eCommerce platform.',
+            myRole2: 'Clarity also holds training sessions for developers every week with a rotating schedule of team members running the session. Topics were suggested by the team and consisted of new technologies, internal systems, common mistakes, and more. I had the opportunity to lead multiple training sessions focused on various parts of the core platform, each session being approximately 1 hour 30 mins.',
+            projects1: 'I completed several large integration projects including Paya payment processing, the National Weather Service, and HautAI.',
+            projList: `Paya Payment Processing - for processing credit card and ACH payments
+                    Haut AI - a SaaS provider that generates skin analysis reports from user uploaded images
+                    National Weather Service - to limit shipping options based on forecasted temperatures`,
+            projects2: 'I also designed a brand new platform AI Provider with an integration with Open AI\'s ChatGPT for generating product details and images. The goal was to use AI generation to reduce the amount of time & effort needed to update product details compared to doing it by hand. This was my favorite project because it allowed me to work with a new popular technology and presented a lot of unique problems to solve.',
+            btnText: 'Clarity Ventures',
+            btnColor: '#1f91ad',
+            btnHovercolor: '#176d82',
+            btnLink: 'https://www.clarity-ventures.com/',
+        },
+        {
+            name: 'Anovaa',
+            title: 'Jr. Software Developer',
+            logoImg: anovaaLogo,
+            date: 'January 2019 - August 2022',
+            location: 'Malvern, PA',
+            myRole1: 'I began my career at Entech (now Anovaa) on the Web Content Publishing Team shortly after obtaining my degree. We were responsibile for all content updates for two client websites and three corresponding microsites. The goal of this entry level team was to learn the company\'s, history, mission, clients, and applications, then move up to a Client Application team after one year.',
+            myRole2: 'After graduating from WCPT I spent a year and a half working on a Client Application team. These teams were consoildated into a single Anovaa Team when the company\'s brand new loan origination platform launched. I was brought on to the Anovaa team to assist with the final stages of production and to help convert all existing clients to the new system.',
+
+            projects1: 'During my time with the WCPT, the largest project I completed was the modernization of 100+ pages of the Citizens Bank & Citizens One loan origination websites. This included the creation of each new web page from scratch in our CMS as well as handling client interactions and deployments.',
+            projList: ``,
+            projects2: 'While on the Anovaa Platform team, I took on a new project with the goal of reducing time & effort required to make UI updates to the platform. I designed and implemented a new process to reduce development time of client agnostic UI layout changes by 66%. Since the platform was brand new, I also spent a lot of time writing new procedures & documentation.',
+            btnText: 'Anovaa',
+            btnColor: '#3d67ff',
+            btnHovercolor: '#1a4bff',
+            btnLink: 'https://www.anovaa.com/',
+        },
+        {
+            name: 'Millersville University',
+            title: 'Undergrad Student',
+            logoImg: millersvilleLogo,
+            date: 'September 2014 - December 2018',
+            location: 'Millersville, PA',
+            myRole1: 'I graduated from Millersville univerity in 2018 with a Bachelor\'s degree in Computer Science.',
+            myRole2: 'During my time at Millersville I also worked part-time at the Sugar Bowl, a local family owned restaurant on campus. My role varied day to day and included working the counter, cooking food, and delivering to the local area. I worked approximately 25 hours per week while maintaining a full course load.',
+            projects1: 'Below are some of the relevant courses I completed while obtaining my degree',
+            projects2: '',
+            projList: `Software Engineering
+                    Database & Web Development
+                    Data Structures
+                    Computer Architecture
+                    Operating Systems
+                    Technical Writing`,
+            btnText: 'Millersville',
+            btnColor: '#d79e0f',
+            btnHovercolor: '#a77b0c',
+            btnLink: 'https://www.millersville.edu/',
+        },
+    ];
+
     return (
         <SectionContainer
             id="work-history"
@@ -70,420 +177,135 @@ const WorkHistory = () => {
             >
                 <Box>
 
-                    <StyledAccordion>
-                        <AccordionSummary
-                            expandIcon={
-                                <ExpandMoreIcon
-                                    sx={{ color: '#fff' }}
-                                />
-                            }
-                            aria-controls="panel1-content"
-                            id="panel1-header"
-                        >
-                            <Card>
-                                <CardMedia
-                                    component="img"
-                                    height='35px'
-                                    image={webstaurantLogo}
-                                    alt="WebstaurantStore Logo"
-                                />
-                            </Card>
-                            <CompanyName>
-                                WebstaurantStore.com
-                            </CompanyName>
-                            <JobTitle>
-                                Software Developer
-                            </JobTitle>
-                        </AccordionSummary>
-                        <AccordionDetails
-                            className="border-acc-top"
-                            sx={{
-                                pt: 2.5
-                            }}
-                        >
-                            <Typography mb={1}>
-                                <CalendarMonthIcon
-                                    size='small'
-                                    sx={{
-                                        mb: -0.5,
-                                        mr: 1,
-                                        color: '#ababab'
-                                    }}
-                                />
-                                November 2023 - Current
-                            </Typography>
-                            <Typography>
-                                <LocationOnIcon
-                                    size='small'
-                                    sx={{
-                                        mb: -0.5,
-                                        mr: 1,
-                                        color: '#ababab'
-                                    }}
-                                />
-                                Lititz, PA
-                            </Typography>
-                            <Box sx={{ px: 1 }}>
-                                <Typography><br /></Typography>
-                                <Typography><br /></Typography>
-                                <Typography variant='button' sx={{ fontStyle: 'bold', fontSize: '1rem', color: '#bfbfbf' }}>
-                                    My Role
-                                </Typography>
-                                <Typography sx={{ mt: 1 }}>
-                                    I joined the WebstaurantStore.com mobile back-end team to assist with development of the WebstaurantStore mobile app. My daily 
-                                    responsibilities include building new features specific to the mobile app or recreating features from the desktop application. 
-                                    I felt right at home when I started here and was able to jump in and start contributing almost immediately. I've really enjoyed 
-                                    the dynamic of my team and the environment we work in. I'm still pretty new in this role but I feel confident in skills here and 
-                                    I'm ready to make a positive impact any way I can. 
-                                </Typography>
-                                <Typography><br /></Typography>
-                                <Typography><br /></Typography>
-                                {/* <Typography variant='button' sx={{ fontStyle: 'bold', fontSize: '1rem', color: '#bfbfbf' }}>
-                                    Projects
-                                </Typography>
-                                <Typography sx={{ mt: 1 }}>
-                                    My largest project so far is a mobile device Image Search feature which allows users to take a picture of a product 
-                                    and search our product catalog for similar items. We utilize OpenAI and Tensorflow technologies to perform these 
-                                    searches.
-                                </Typography>
-                                <Typography><br /></Typography> */}
-                            </Box>
-                        </AccordionDetails>
-                        <StyledAccordionActions>
-                            <Typography variant='body2'>
-                                Check them out here
-                            </Typography>
-                            <Button
-                                href='https://www.webstaurantstore.com/'
-                                target='_blank'
-                                variant="contained"
-                                color="success"
-                                sx={{
-                                    textTransform: 'none',
-                                    ml: 1
-                                }}
-                            >
-                                WebstaurantStore
-                            </Button>
-                        </StyledAccordionActions>
-                    </StyledAccordion>
+                    {pastEmployers.map((employer, index) => (
 
-                    <StyledAccordion>
-                        <AccordionSummary
-                            expandIcon={
-                                <ExpandMoreIcon
-                                    sx={{ color: '#fff' }}
-                                />
-                            }
-                            aria-controls="panel2-content"
-                            id="panel2-header"
+                        <StyledAccordion
+                            key={index}
                         >
-                            <Card>
-                                <CardMedia
-                                    component="img"
-                                    height='35px'
-                                    image={clarityLogo}
-                                    alt="Clarity Ventures Logo"
-                                />
-                            </Card>
-                            <CompanyName>
-                                Clarity Ventures, Inc.
-                            </CompanyName>
-                            <JobTitle>
-                                Software Developer
-                            </JobTitle>
-                        </AccordionSummary>
-                        <AccordionDetails
-                            className="border-acc-top"
-                            sx={{
-                                pt: 2.5
-                            }}
-                        >
-                            <Typography mb={1}>
-                                <CalendarMonthIcon
-                                    size='small'
-                                    sx={{
-                                        mb: -0.5,
-                                        mr: 1,
-                                        color: '#ababab'
-                                    }}
-                                />
-                                January 2023 - June 2023
-                            </Typography>
-                            <Typography>
-                                <LocationOnIcon
-                                    size='small'
-                                    sx={{
-                                        mb: -0.5,
-                                        mr: 1,
-                                        color: '#ababab'
-                                    }}
-                                />
-                                Austin, TX
-                            </Typography>
-                            <Box sx={{ px: 1 }}>
-                                <Typography><br /></Typography>
-                                <Typography><br /></Typography>
-                                <Typography variant='button' sx={{ fontStyle: 'bold', fontSize: '1rem', color: '#bfbfbf' }}>
-                                    My Role
-                                </Typography>
-                                <Typography sx={{ mt: 1 }}>
-                                    Clarity was an amazing company to work for and really enjoyed the time I spent here. Even if it was only 6 months, I made 
-                                    incredible strides here as a developer and met some fantastic people along the way. The company's enthusiasm for the work that they do and the 
-                                    level of talent among the dev teams are truly unmatched. At Clarity, I was responsible for 
-                                    designing and implementing new features and client customizations for Clarity's eCommerce platform. This mostly 
-                                    included updates to default business logic requested by the client or integrations with new 3rd party systems to support 
-                                    upcoming features.
-                                </Typography>
-                                <Typography><br /></Typography>
-                                <Typography>
-                                    Clarity also holds training sessions for each team 2 hours every week. For developers, that meant a rotating schedule of team members picking 
-                                    a topic and running a training session. Topics were compiled by the team and consisted of new technologies, internal systems, common mistakes, 
-                                    and more. I had the opportunity to lead multiple training sessions with the development team focused on various parts of the core platform, 
-                                    each session being approximately 1 hour 30 mins.
-                                </Typography>
-                                <Typography><br /></Typography>
-                                <Typography><br /></Typography>
-                                <Typography variant='button' sx={{ fontStyle: 'bold', fontSize: '1rem', color: '#bfbfbf' }}>
-                                    Projects
-                                </Typography>
-                                <Typography sx={{ mt: 1 }}>
-                                    I completed several large integration projects including Paya payment processing, the National Weather Service, and HautAI.
-                                    <ul className="pad-list">
-                                        <li>Paya Payment Processing - for processing credit card and ACH payments</li>
-                                        <li>Haut AI - a SaaS provider that generates skin analysis reports for user uploaded images</li>
-                                        <li>National Weather Service - to limit shipping options based on forecasted temperatures</li>
-                                    </ul>
-                                </Typography>
-                                <Typography><br /></Typography>
-                                <Typography>
-                                    Along with these projects, I also designed and implemented a brand new platform AI Provider including an integration with Open 
-                                    AI's ChatGPT for generating product details and images. The goal of this project was to use AI generation to reduce the amount 
-                                    of time & effort needed to update product details compared to doing it by hand. This was definitely my favorite project during 
-                                    my time here. It allowed me to work with a new popular technology and presented a lot of unique problems to solve. 
-                                </Typography>
-                                
-                                <Typography><br /></Typography>
-                            </Box>
-                        </AccordionDetails>
-                        <StyledAccordionActions>
-                            <Typography variant='body2'>
-                                Check them out here
-                            </Typography>
-                            <Button
-                                href='https://www.clarity-ventures.com/'
-                                target='_blank'
-                                variant="contained"
-                                sx={{
-                                    textTransform: 'none',
-                                    backgroundColor: '#26b5d9',
-                                    ml: 1
-                                }}
+                            <AccordionSummary
+                                expandIcon={
+                                    <ExpandMoreIcon
+                                        sx={{ color: '#fff' }}
+                                    />
+                                }
+                                aria-controls="panel2-content"
+                                id="panel2-header"
                             >
-                                Clarity Ventures
-                            </Button>
-                        </StyledAccordionActions>
-                    </StyledAccordion>
+                                <Card>
+                                    <CardMedia
+                                        component="img"
+                                        height='35px'
+                                        image={employer.logoImg}
+                                        alt="Clarity Ventures Logo"
+                                    />
+                                </Card>
+                                <CompanyName>
+                                    {employer.name}
+                                </CompanyName>
+                                <JobTitle>
+                                    {employer.title}
+                                </JobTitle>
+                            </AccordionSummary>
 
-                    <StyledAccordion>
-                        <AccordionSummary
-                            expandIcon={
-                                <ExpandMoreIcon
-                                    sx={{ color: '#fff' }}
-                                />
-                            }
-                            aria-controls="panel3-content"
-                            id="panel3-header"
-                        >
-                            <Card>
-                                <CardMedia
-                                    component="img"
-                                    height='35px'
-                                    image={anovaaLogo}
-                                    alt="Anovaa Logo"
-                                />
-                            </Card>
-                            <CompanyName>
-                                Anovaa
-                            </CompanyName>
-                            <JobTitle>
-                                Jr. Software Developer
-                            </JobTitle>
-                        </AccordionSummary>
-                        <AccordionDetails
-                            className="border-acc-top"
-                            sx={{
-                                pt: 2.5
-                            }}
-                        >
-                            <Typography mb={1}>
-                                <CalendarMonthIcon
-                                    size='small'
-                                    sx={{
-                                        mb: -0.5,
-                                        mr: 1,
-                                        color: '#ababab'
-                                    }}
-                                />
-                                January 2019 - August 2022
-                            </Typography>
-                            <Typography>
-                                <LocationOnIcon
-                                    size='small'
-                                    sx={{
-                                        mb: -0.5,
-                                        mr: 1,
-                                        color: '#ababab'
-                                    }}
-                                />
-                                Malvern, PA
-                            </Typography>
-                            <Box sx={{ px: 1 }}>
-                                <Typography><br /></Typography>
-                                <Typography><br /></Typography>
-                                <Typography variant='button' sx={{ fontStyle: 'bold', fontSize: '1rem', color: '#bfbfbf' }}>
-                                    My Role
-                                </Typography>
-                                <Typography sx={{ mt: 1 }}>
-                                    Shortly after obtaining my degree, I began my career at Entech (now Anovaa) on the Web Content Publishing Team. We were responsibile 
-                                    for all content updates requested for 2 client websites and 3 corresponding microsites. The goal of this entry level team was to 
-                                    learn the company's, history, mission, clients, and applications, then move up to a Client Application team after 1 year. I worked 
-                                    on this team for 8 months before moving up to work on the application team for Entech's largest client. Entech was in the process of 
-                                    building a brand new, state of the art, loan origination platform, that would later be known as Anovaa, which had been in development 
-                                    for the past 5 years. After a year and a half working on a CA team, the individual client teams were condensed down to one Platform 
-                                    Team. I was brought on to this "Anovaa" team to assist with the final stages on production and to convert all existing clients were 
-                                    being converted to the new system.
-                                </Typography>
-                                <Typography><br /></Typography>
-                                <Typography><br /></Typography>
-                                <Typography variant='button' sx={{ fontStyle: 'bold', fontSize: '1rem', color: '#bfbfbf' }}>
-                                    Projects
-                                </Typography>
-                                <Typography sx={{ mt: 1 }}>
-                                    During my time with the WCP Team, the largest project I completed was the modernization of 100+ pages for the Citizens Bank & Citizens 
-                                    One loan origination websites. This included building each new web page from scratch in our CMS as well as overseeing the entire 
-                                    production deployment.
-                                </Typography>
-                                <Typography><br /></Typography>
-                                <Typography>
-                                    While on the Anovaa Platform team, I took on a new project with the goal of reducing time & effort required to make UI updates to the 
-                                    platform. I designed and implemented a new process to reduce development time of client agnostic UI layout changes by 66%. Since the
-                                    platform was brand new, I also spent a lot of time writing new procedures & documentation for the new application.
-                                </Typography>
-                                <Typography><br /></Typography>
-                            </Box>
-                        </AccordionDetails>
-                        <StyledAccordionActions>
-                            <Typography variant='body2'>
-                                Check them out here
-                            </Typography>
-                            <Button
-                                href='https://www.anovaa.com/'
-                                target='_blank'
-                                variant="contained"
-                                color="primary"
-                                sx={{
-                                    textTransform: 'none',
-                                    ml: 1
-                                }}
+                            <StyledAccordionDetails
+                                className="border-acc-top"
                             >
-                                Anovaa
-                            </Button>
-                        </StyledAccordionActions>
-                    </StyledAccordion>
+                                <DatesAndLocationStack>
+                                    <Box
+                                        display="flex"
+                                        alignItems="center"
+                                    >
+                                        <CalendarMonthIcon
+                                            size='small'
+                                            sx={{
+                                                mr: 1,
+                                                color: '#ababab'
+                                            }}
+                                        />
+                                        <Typography>
+                                            {employer.date}
+                                        </Typography>
+                                    </Box>
+                                    <Box
+                                        display="flex"
+                                        alignItems="center"
+                                    >
+                                        <LocationOnIcon
+                                            size='small'
+                                            sx={{
+                                                mr: 1,
+                                                color: '#ababab'
+                                            }}
+                                        />
+                                        <Typography>
+                                            {employer.location}
+                                        </Typography>
+                                    </Box>
+                                </DatesAndLocationStack>
 
-                    <StyledAccordion>
-                        <AccordionSummary
-                            expandIcon={
-                                <ExpandMoreIcon
-                                    sx={{ color: '#fff' }}
-                                />
-                            }
-                            aria-controls="panel3-content"
-                            id="panel3-header"
-                        >
-                            <Card>
-                                <CardMedia
-                                    component="img"
-                                    height='35px'
-                                    image={millersvilleLogo}
-                                    alt="Millersville University Logo"
-                                />
-                            </Card>
-                            <CompanyName>
-                                Millersville University
-                            </CompanyName>
-                            <JobTitle>
-                                Undergrad Student
-                            </JobTitle>
-                        </AccordionSummary>
-                        <AccordionDetails
-                            className="border-acc-top"
-                            sx={{
-                                pt: 2.5
-                            }}
-                        >
-                            <Typography mb={1}>
-                                <CalendarMonthIcon
-                                    size='small'
-                                    sx={{
-                                        mb: -0.5,
-                                        mr: 1,
-                                        color: '#ababab'
-                                    }}
-                                />
-                                September 2014 - December 2018
-                            </Typography>
-                            <Typography>
-                                <LocationOnIcon
-                                    size='small'
-                                    sx={{
-                                        mb: -0.5,
-                                        mr: 1,
-                                        color: '#ababab'
-                                    }}
-                                />
-                                Millersville, PA
-                            </Typography>
-                            <Box sx={{ px: 1 }}>
-                                <Typography><br /></Typography>
-                                <Typography>
-                                    I graduated from Millersville univerity in 2018 with a Bachelor's degree in Computer Science. Below are some of the relevant courses I completed while obtaining my degree
-                                    <ul className="pad-list">
-                                        <li>Software Engineering</li>
-                                        <li>Database & Web Development</li>
-                                        <li>Data Structures</li>
-                                        <li>Computer Architecture</li>
-                                        <li>Technical Writing</li>
-                                    </ul>
+                                <AccordionDetailsColumnBox>
+
+                                    {/* Column 1: My Role */}
+                                    <AccordionDetailsColumn>
+                                        <Typography variant='button' sx={{ fontStyle: 'bold', fontSize: '1rem', color: '#bfbfbf' }}>
+                                            My Role
+                                        </Typography>
+                                        <BodyText sx={{ mt: 1 }}>
+                                            {employer.myRole1}
+                                        </BodyText>
+                                        <BodyText sx={{ mt: 2 }}>
+                                            {employer.myRole2}
+                                        </BodyText>
+                                    </AccordionDetailsColumn>
+
+                                    {/* Column 2: Projects */}
+                                    <AccordionDetailsColumn>
+                                        <Typography variant='button' sx={{ fontStyle: 'bold', fontSize: '1rem', color: '#bfbfbf' }}>
+                                            Projects
+                                        </Typography>
+                                        <BodyText sx={{ mt: 1 }}>
+                                            {employer.projects1}
+                                        </BodyText>
+                                        <BodyText sx={{ mt: 2 }}>
+                                            {employer.projList && (
+                                                <ul className='pad-list'>
+                                                    {employer.projList.split('\n').map((project, idx) => (
+                                                        <li key={idx}>{project}</li>
+                                                    ))}
+                                                </ul>
+                                            )}
+                                        </BodyText>
+                                        <BodyText sx={{ mt: 2 }}>
+                                            {employer.projects2}
+                                        </BodyText>
+                                    </AccordionDetailsColumn>
+
+                                </AccordionDetailsColumnBox>
+                            </StyledAccordionDetails>
+                            <StyledAccordionActions>
+                                <Typography variant='body2' sx={{ color: '#cccccc' }}>
+                                    Check them out here
                                 </Typography>
-                                <Typography><br /></Typography>
-                                <Typography>
-                                    During my time at Millersville I also worked part-time at the Sugar Bowl, a local family owned restaurant on campus. 
-                                    While at Sugar Bowl, my role varied day to day and included working the counter, cooking food, and delivering to the 
-                                    local area. I worked approximately 25 hours/week while maintaining a full course load.
-                                </Typography>
-                                <Typography><br /></Typography>
-                            </Box>
-                        </AccordionDetails>
-                        <StyledAccordionActions>
-                            <Typography variant='body2'>
-                                Check them out here
-                            </Typography>
-                            <MillersvilleButton
-                                href='https://www.millersville.edu/'
-                                target='_blank'
-                                variant="contained"
-                                // sx={{
-                                //     textTransform: 'none',
-                                //     backgroundColor: '#b3b300',
-                                //     ml: 1
-                                // }}
-                            >
-                                Millersville
-                            </MillersvilleButton>
-                        </StyledAccordionActions>
-                    </StyledAccordion>
+                                <Button
+                                    href={employer.btnLink}
+                                    target='_blank'
+                                    variant="contained"
+                                    sx={{
+                                        textTransform: 'none',
+                                        ml: 1.5,
+                                        px: 1,
+                                        py: 0.5,
+                                        backgroundColor: employer.btnColor,
+                                        '&:hover': {
+                                            backgroundColor: employer.btnHovercolor,
+                                        },
+                                    }}
+                                >
+                                    {employer.btnText}
+                                </Button>
+                            </StyledAccordionActions>
+                        </StyledAccordion>
+                    ))}
 
                 </Box>
             </Box>

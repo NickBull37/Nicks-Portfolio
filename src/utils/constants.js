@@ -9,7 +9,7 @@ export const famfiction = require('../images/famfiction-showcase.png');
 export const vanhornContractors = require('../images/vanhorn-contractors-showcase.png');
 export const comingsoon = require('../images/coming-soon.png');
 export const cat = require('../images/cat.png');
-export const nblogo = require('../images/nb-logo-trans.png');
+export const nblogo = require('../images/nb-logo.png');
 
 
 // Icons

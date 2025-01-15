@@ -28,7 +28,7 @@ const RedGradButton = styled(Button)(() => ({
     boxShadow: '0px 2px 10px 1px #1a1a1a',
     backgroundColor: '#7e22ce',
     '&:hover': {
-        boxShadow: '0px 2px 20px 5px #1a1a1a',
+        background: 'linear-gradient(to right, #af048a, #c9031d)',
     },
 }));
 
@@ -79,6 +79,9 @@ const Contact = () => {
     return (
         <SectionContainer
             id="contact"
+            sx={{
+                mb: 8
+            }}
         >
             <Box className="row">
                 <Box
@@ -178,10 +181,9 @@ const Contact = () => {
                 </Box>
             </Box>
 
-            <Box
+            {/* <Box
                 display="flex"
                 justifyContent="flex-end"
-                px="5%"
             >
                 <CardMedia
                     component='img'
@@ -193,7 +195,7 @@ const Contact = () => {
                         maxWidth: '80px'
                     }}
                 />
-            </Box>
+            </Box> */}
             
         </SectionContainer>
     );
