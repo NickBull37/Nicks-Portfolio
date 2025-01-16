@@ -1,23 +1,15 @@
 import React from 'react';
-import { styled } from '@mui/material/styles';
 import { Box, Typography } from '@mui/material';
 import { codeIcon, cropIcon, laptopCodeIcon } from '../utils/constants';
 import SectionContainer from '../styled/SectionContainer';
-
-const ServicesHeader = styled(Typography)(() => ({
-    fontSize: '3.75rem',
-    fontWeight: '600',
-    color: '#fff'
-}));
+import SectionHeader from '../styled/SectionHeader';
 
 const Services = () => {
     return (
-        <SectionContainer
-            id="services"
-        >
-            <ServicesHeader>
+        <SectionContainer id="services">
+            <SectionHeader>
                 My Services
-            </ServicesHeader>
+            </SectionHeader>
 
             <Box
                 className="services-list"

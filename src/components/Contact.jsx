@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { styled } from '@mui/material/styles';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { Box, Button, Snackbar, LinearProgress, Typography, Fade, CardMedia } from '@mui/material';
+import { Box, Button, Snackbar, LinearProgress, Typography, Fade } from '@mui/material';
+import { paperPlaneIcon, phoneIcon, githubIcon, linkedInIcon } from '../utils/constants';
 import MuiAlert from '@mui/material/Alert';
 import DownloadIcon from '@mui/icons-material/Download';
-import { paperPlaneIcon, phoneIcon, githubIcon, linkedInIcon, cat } from '../utils/constants';
 import SectionContainer from '../styled/SectionContainer';
+import SectionHeader from '../styled/SectionHeader';
 
 const theme = createTheme({
     palette: {
@@ -14,13 +15,6 @@ const theme = createTheme({
           },
     },
 });
-
-const ContactHeader = styled(Typography)(() => ({
-    fontSize: '3.75rem',
-    fontWeight: '600',
-    color: '#fff',
-    lineHeight: '1.3'
-}));
 
 const RedGradButton = styled(Button)(() => ({
     color: '#fff',
@@ -90,9 +84,9 @@ const Contact = () => {
                     flexDirection={{ xs: 'column', md: 'inherit' }}
                     justifyContent={{ xs: 'flex-start', md: 'inherit' }}
                 >
-                    <ContactHeader>
+                    <SectionHeader>
                         Contact Me
-                    </ContactHeader>
+                    </SectionHeader>
 
                     <Typography
                         sx={{

@@ -2,23 +2,16 @@ import React from 'react';
 import { styled } from '@mui/material/styles';
 import { Box, Stack, Typography, Button, Card, CardMedia } from '@mui/material';
 import { Accordion, AccordionActions, AccordionSummary, AccordionDetails } from '@mui/material';
+import { webstaurantLogo, clarityLogo, anovaaLogo, millersvilleLogo } from '../utils/constants';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
-import { webstaurantLogo, clarityLogo, anovaaLogo, millersvilleLogo } from '../utils/constants';
 import SectionContainer from '../styled/SectionContainer';
-
-const WorkHistoryHeader = styled(Typography)(() => ({
-    fontSize: '3.75rem',
-    fontWeight: '600',
-    color: '#fff'
-}));
+import SectionHeader from '../styled/SectionHeader';
 
 const StyledAccordion = styled(Accordion)(() => ({
     color: '#fff',
     backgroundColor: '#262626',
-    // padding: '10px'
-    // minHeight: '50px',
 }));
 
 const StyledAccordionDetails = styled(AccordionDetails)(({ theme }) => ({
@@ -40,7 +33,7 @@ const AccordionDetailsColumnBox = styled(Box)(({ theme }) => ({
     gap: 96,
     marginTop: '32px',
     padding: '4px',
-    [theme.breakpoints.down('md')]: { // for smaller screens
+    [theme.breakpoints.down('md')]: {
         flexDirection: 'column',
         gap: 40,
     },
@@ -48,7 +41,7 @@ const AccordionDetailsColumnBox = styled(Box)(({ theme }) => ({
 
 const AccordionDetailsColumn = styled(Box)(({ theme }) => ({
     width: '50%',
-    [theme.breakpoints.down('md')]: { // for smaller screens
+    [theme.breakpoints.down('md')]: {
         width: '100%',
     },
 }));
@@ -64,7 +57,7 @@ const CompanyName = styled(Typography)(({ theme }) => ({
     lineHeight: '2',
     fontSize: '1.063rem',
     [theme.breakpoints.down('md')]: {
-        width: '75%', // for smaller screens
+        width: '75%',
     },
 }));
 
@@ -73,11 +66,11 @@ const JobTitle = styled(Typography)(({ theme }) => ({
     lineHeight: '2',
     display: 'block',
     [theme.breakpoints.down('md')]: {
-        display: 'none', // for smaller screens
+        display: 'none',
     },
 }));
 
-const BodyText = styled(Typography)(({ theme }) => ({
+const BodyText = styled(Typography)(() => ({
     color: '#fff',
     fontSize: '0.938rem',
     letterSpacing: '0.03em',
@@ -163,12 +156,10 @@ const WorkHistory = () => {
     ];
 
     return (
-        <SectionContainer
-            id="work-history"
-        >
-            <WorkHistoryHeader>
+        <SectionContainer id="work-history">
+            <SectionHeader>
                 My Experience
-            </WorkHistoryHeader>
+            </SectionHeader>
 
             <Box
                 display={'flex'}

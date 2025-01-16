@@ -1,12 +1,12 @@
 import React from 'react';
 import { styled } from '@mui/material/styles';
-import { Box, Typography, Button } from '@mui/material';
+import { Box, Button } from '@mui/material';
 import { nblogo } from '../utils/constants';
 
 const NavbarContainer = styled(Box)(({ theme }) => ({
-    display: 'flex', // for medium and larger screens
+    display: 'flex',
     [theme.breakpoints.down('md')]: {
-        display: 'none', // for small screens
+        display: 'none',
     },
     justifyContent: 'flex-end',
     alignItems: 'center',
@@ -18,9 +18,6 @@ const NavbarContainer = styled(Box)(({ theme }) => ({
 
 const LogoContainer = styled(Box)(() => ({
     display: 'flex',
-    // paddingRight: '0.5rem',
-    // paddingLeft: '0.5rem',
-    // paddingBottom: '0.125rem',
     paddingRight: '0',
     paddingLeft: '0',
     paddingTop: '0.5rem',
@@ -52,15 +49,8 @@ const Navbar = () => {
     return (
         <NavbarContainer>
 
-            <LogoContainer
-                // className="grad-border"
-            >
+            <LogoContainer>
                 <img src={nblogo} height={40}/>
-                {/* <Typography
-                    className="progress-h3"
-                >
-                    Portfolio
-                </Typography> */}
             </LogoContainer>
             
             <NavBtnContainer>

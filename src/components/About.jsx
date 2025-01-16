@@ -3,8 +3,8 @@ import { styled } from '@mui/material/styles';
 import { aboutImage } from '../utils/constants';
 import { Box, Typography, Tabs, Tab } from '@mui/material';
 import PropTypes from 'prop-types';
-import OpenInNewRoundedIcon from '@mui/icons-material/OpenInNewRounded';
 import SectionContainer from '../styled/SectionContainer';
+import SectionHeader from '../styled/SectionHeader';
 
 function CustomTabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -38,12 +38,6 @@ function a11yProps(index) {
     };
 }
 
-const AboutMeHeader = styled(Typography)(() => ({
-    fontSize: '3.75rem',
-    fontWeight: '600',
-    color: '#fff'
-}));
-
 const AboutMeText = styled(Typography)(({ theme }) => ({
     color: '#ababab',
     fontSize: '1rem', // default size
@@ -52,7 +46,7 @@ const AboutMeText = styled(Typography)(({ theme }) => ({
     }
 }));
 
-const StyledTabs = styled(Tabs)(({ theme }) => ({
+const StyledTabs = styled(Tabs)(() => ({
     backgroundColor: '#1a1a1a',
     borderTopRightRadius: '10px',
     borderTopLeftRadius: '10px',
@@ -61,7 +55,7 @@ const StyledTabs = styled(Tabs)(({ theme }) => ({
     },
 }));
 
-const StyledTab = styled(Tab)(({ theme }) => ({
+const StyledTab = styled(Tab)(() => ({
     color: '#ababab',
     '&.Mui-selected': {
         fontWeight: 600,
@@ -98,9 +92,7 @@ const About = () => {
     };
 
     return (
-        <SectionContainer
-            id="about-me"
-        >
+        <SectionContainer id="about-me">
             <Box className="row">
 
                 <Box className="about-col-1">
@@ -109,9 +101,9 @@ const About = () => {
 
                 <Box className="about-col-2">
 
-                    <AboutMeHeader>
+                    <SectionHeader>
                         About Me
-                    </AboutMeHeader>
+                    </SectionHeader>
 
                     <AboutMeText>
                         I am a full-stack software developer with 6+ years experience 

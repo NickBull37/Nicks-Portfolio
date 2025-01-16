@@ -214,20 +214,14 @@ nav .fa-solid {
 .hover-fade:hover {
     border-bottom: 2px solid transparent;
     border-image: linear-gradient(to right, #EE0425, #DE04AE) 1;
-    /* border-image: linear-gradient(to right, #EE0425, #A602B0, #2F0897) 1; */
 }
 
 .grad-border {
     border-width: 1px!important;
     border-style: solid!important;
-    /* border-image: linear-gradient(to right, #EE0425, #2F0897) 1; */
     border-image: linear-gradient(to right, #EE0425, #DE04AE) 1;
 }
-/* .grad-text {
-    background: linear-gradient(to right, #EE0425, #2F0897)!important;
-    -webkit-background-clip: text!important;
-    -webkit-text-fill-color: transparent!important;
-} */
+
 .grad-text {
     background: linear-gradient(to right, #EE0425, #DE04AE)!important;
     -webkit-background-clip: text!important;
@@ -364,10 +358,6 @@ nav .fa-solid {
 /********************************************************************************************************************************************
 *********************************************************** ?. WORK HISTORY *****************************************************************
 ********************************************************************************************************************************************/
-#work-history {
-    /* padding: 50px 0; */
-}
-
 .pad-list {
     margin-left: 1.125rem;
     
@@ -387,10 +377,6 @@ nav .fa-solid {
 /********************************************************************************************************************************************
 ************************************************************* 7. PORTFOLIO ******************************************************************
 ********************************************************************************************************************************************/
-#portfolio {
-    /* padding: 50px 0; */
-}
-
 .work-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -415,7 +401,7 @@ nav .fa-solid {
     width: 100%;
     height: 0;
     /* background: linear-gradient(rgba(0, 0, 0, 0.6), var(--purple)); */
-    background: linear-gradient(rgba(0, 0, 0, 0.6), #DE04AE, #EE0425);
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(222, 4, 174, 0.75), rgba(238, 4, 37, 0.9));
     border-radius: 10px;
     position: absolute;
     left: 0;

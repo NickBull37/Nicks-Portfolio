@@ -1,6 +1,6 @@
 import React from 'react';
 import { styled } from '@mui/material/styles';
-import { Box, Stack, Typography, Button } from '@mui/material';
+import { Box, Stack, Typography } from '@mui/material';
 
 const HeroContainer = styled(Box)(({ theme }) => ({
     height: 'calc(100vh - 70px)',
@@ -9,7 +9,7 @@ const HeroContainer = styled(Box)(({ theme }) => ({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    [theme.breakpoints.down('md')]: { // for smaller screens
+    [theme.breakpoints.down('md')]: {
         flexDirection: 'column-reverse',
         justifyContent: 'flex-end',
         height: 'auto'
@@ -19,7 +19,7 @@ const HeroContainer = styled(Box)(({ theme }) => ({
 const HeroTextContainer = styled(Stack)(({ theme }) => ({
     display: 'flex',
     marginTop: '0',
-    [theme.breakpoints.down('md')]: { // for smaller screens
+    [theme.breakpoints.down('md')]: {
         marginTop: '2rem',
     },
 }));
@@ -28,14 +28,14 @@ const HeroTextLarge = styled(Typography)(({ theme }) => ({
     fontSize: '3.75rem',
     fontWeight: '700',
     lineHeight: '1.235',
-    [theme.breakpoints.down('md')]: { // for smaller screens
+    [theme.breakpoints.down('md')]: {
         fontSize: '2.5rem',
     },
 }));
 
 const HeroTextSmall = styled(Typography)(({ theme }) => ({
     fontSize: '1.5rem',
-    [theme.breakpoints.down('md')]: { // for smaller screens
+    [theme.breakpoints.down('md')]: {
         fontSize: '1.25rem',
     },
 }));

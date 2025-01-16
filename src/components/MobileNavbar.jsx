@@ -5,14 +5,14 @@ import { nblogo } from '../utils/constants';
 import MenuIcon from '@mui/icons-material/Menu';
 
 const NavbarContainer = styled(Box)(({ theme }) => ({
-    display: 'flex', // default size
+    display: 'flex',
     [theme.breakpoints.up('md')]: {
-        display: 'none', // for medium and larger screens
+        display: 'none',
     },
     backgroundColor: '#080808',
 }));
 
-const LogoContainer = styled(Box)(({ theme }) => ({
+const LogoContainer = styled(Box)(() => ({
     display: 'flex',
     paddingTop: '0.5rem',
     alignItems: 'center',
@@ -50,15 +50,8 @@ const MobileNavbar = () => {
                 <Container maxWidth="xl">
                     <Toolbar disableGutters>
 
-                        <LogoContainer
-                            // className="grad-border"
-                        >
+                        <LogoContainer>
                             <img src={nblogo} height={40}/>
-                            {/* <Typography
-                                className="progress-h3"
-                            >
-                                Portfolio
-                            </Typography> */}
                         </LogoContainer>
 
                         <NavMenuContainer>

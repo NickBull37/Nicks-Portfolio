@@ -1,25 +1,16 @@
 import React from 'react';
-import { styled } from '@mui/material/styles';
 import { Box, Typography, Tooltip } from '@mui/material';
 import { sunshot, famfiction, vanhornContractors, comingsoon } from '../utils/constants';
-import { upRightSquareIcon } from '../utils/constants';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import SectionContainer from '../styled/SectionContainer';
-
-const PortfolioHeader = styled(Typography)(() => ({
-    fontSize: '3.75rem',
-    fontWeight: '600',
-    color: '#fff'
-}));
+import SectionHeader from '../styled/SectionHeader';
 
 const Portfolio = () => {
     return (
-        <SectionContainer
-            id="portfolio"
-        >
-            <PortfolioHeader>
+        <SectionContainer id="portfolio">
+            <SectionHeader>
                 My Work
-            </PortfolioHeader>
+            </SectionHeader>
             
             <Box className="work-list">
                 <Box className="work">

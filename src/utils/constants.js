@@ -1,16 +1,18 @@
-// Images
+// My imgs
+export const nblogo = require('../images/nb-logo.png');
 export const aboutImage = require('../images/about-image.png');
-export const webstaurantLogo = require('../images/webstaurantstore-logo.png');
-export const clarityLogo = require('../images/clarity-logo.jpg');
-export const anovaaLogo = require('../images/anovaa-logo.png');
-export const millersvilleLogo = require('../images/millersville-logo.jpg');
+
+// Portfolio showcase imgs
 export const sunshot = require('../images/sunshot-showcase.png');
 export const famfiction = require('../images/famfiction-showcase.png');
 export const vanhornContractors = require('../images/vanhorn-contractors-showcase.png');
 export const comingsoon = require('../images/coming-soon.png');
-export const cat = require('../images/cat.png');
-export const nblogo = require('../images/nb-logo.png');
 
+// Work history imgs
+export const webstaurantLogo = require('../images/webstaurantstore-logo.png');
+export const clarityLogo = require('../images/clarity-logo.jpg');
+export const anovaaLogo = require('../images/anovaa-logo.png');
+export const millersvilleLogo = require('../images/millersville-logo.jpg');
 
 // Icons
 export const codeIcon = <i className="fa-solid fa-code"></i>;
