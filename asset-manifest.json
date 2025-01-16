@@ -1,24 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.06fe006f.css",
-    "main.js": "/static/js/main.5367691c.js",
+    "main.css": "/static/css/main.e11e6128.css",
+    "main.js": "/static/js/main.a9cf06ce.js",
     "static/media/about-image.png": "/static/media/about-image.1daaacf6ab63c03c68a2.png",
     "static/media/hero-image.png": "/static/media/hero-image.fc79635370af8dd41233.png",
     "static/media/famfiction-showcase.png": "/static/media/famfiction-showcase.5556035b8388d007a163.png",
-    "static/media/nb-logo.png": "/static/media/nb-logo.78356af314fe02f99169.png",
+    "static/media/nb-logo.png": "/static/media/nb-logo.647b74a96277b60639e4.png",
     "static/media/vanhorn-contractors-showcase.png": "/static/media/vanhorn-contractors-showcase.974c2157682e4e196ad1.png",
     "static/media/coming-soon.png": "/static/media/coming-soon.f23b02e26627d569d5e1.png",
     "static/media/sunshot-showcase.png": "/static/media/sunshot-showcase.3f5671b5a67680e3128b.png",
-    "static/media/cat.png": "/static/media/cat.903a3b5a9513bc4cac31.png",
     "static/media/Progress.ttf": "/static/media/Progress.b0ca549a99307506af1b.ttf",
     "static/media/Brave.ttf": "/static/media/Brave.9477467165cc74f43ed2.ttf",
     "static/media/millersville-logo.jpg": "/static/media/millersville-logo.36d88a60b8afd06d60f4.jpg",
     "index.html": "/index.html",
-    "main.06fe006f.css.map": "/static/css/main.06fe006f.css.map",
-    "main.5367691c.js.map": "/static/js/main.5367691c.js.map"
+    "main.e11e6128.css.map": "/static/css/main.e11e6128.css.map",
+    "main.a9cf06ce.js.map": "/static/js/main.a9cf06ce.js.map"
   },
   "entrypoints": [
-    "static/css/main.06fe006f.css",
-    "static/js/main.5367691c.js"
+    "static/css/main.e11e6128.css",
+    "static/js/main.a9cf06ce.js"
   ]
 }
