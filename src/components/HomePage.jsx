@@ -13,8 +13,8 @@ const PageContainer = styled(Stack)(({ theme }) => ({
     paddingRight: '14%',
     paddingLeft: '14%',
     [theme.breakpoints.down('md')]: {
-        paddingRight: '10%',
-        paddingLeft: '10%',
+        paddingRight: '8%',
+        paddingLeft: '8%',
     },
 }));
 

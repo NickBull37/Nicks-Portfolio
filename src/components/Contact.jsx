@@ -142,7 +142,7 @@ const Contact = () => {
                     <form onSubmit={handleSubmit} name="submit-to-google-sheet">
                         <input type="text" name="Name" placeholder="Your Name" required />
                         <input type="email" name="Email" placeholder="Your Email" required />
-                        <textarea name="Message" rows="6" placeholder="Your Message" />
+                        <textarea name="Message" rows="6" placeholder="Your Message" style={{resize: 'none'}} />
                         <ThemeProvider theme={theme}>
                             <Fade
                                 in={loadingBar}
